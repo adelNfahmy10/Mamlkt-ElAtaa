@@ -4,9 +4,6 @@
   color: #fff;
   .right{
     padding: 20px 100px 20px 0;
-    h4{
-      font-size: 35px;
-    }
     .contact{
       .mobile-image{
         width: 40px;
@@ -14,13 +11,14 @@
       }
       .icons{
         a{
-          width: 30px;
-          height: 30px;
+          width: 20px;
+          height: 20px;
           background-color: #000;
           transition: all .3s;
           i{
             color: #a0a0a0a8;
             transition: all .3s;
+            font-size: 20px;
           }
           &:hover{
             background-color: #005872;
@@ -29,12 +27,6 @@
             }
           }
         }
-      }
-    }
-
-    .who{
-      p{
-        font-size: 20px;
       }
     }
   }
