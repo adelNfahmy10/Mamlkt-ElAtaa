@@ -1,0 +1,48 @@
+
+.who-we-are{
+  background-color: #003343;
+  color: #fff;
+  .right{
+    padding: 20px 100px 20px 0;
+    h4{
+      font-size: 35px;
+    }
+    .contact{
+      .mobile-image{
+        width: 40px;
+        transform: rotate(20deg);
+      }
+      .icons{
+        a{
+          width: 30px;
+          height: 30px;
+          background-color: #000;
+          transition: all .3s;
+          i{
+            color: #a0a0a0a8;
+            transition: all .3s;
+          }
+          &:hover{
+            background-color: #005872;
+            i{
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+
+    .who{
+      p{
+        font-size: 20px;
+      }
+    }
+  }
+
+}
+
+@media (max-width:991px) {
+  .right{
+    padding: 25px !important;
+  }
+}
