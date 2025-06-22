@@ -1,6 +1,7 @@
 .parteners{
+  background: linear-gradient(to top, #0033439a 0%10%, #00334329, #fff);
   .partener-info{
-    height: 620px;
+    height: 550px;
     img{
       width: 100%;
       height: 100%;
@@ -10,7 +11,7 @@
     }
     .partener-details{
       position: relative;
-      top: 155px;
+      top: 120px;
     }
     h2{
       font-size: 60px;
@@ -23,9 +24,8 @@
     }
     .liner-bg{
       height: 300px;
-      background: linear-gradient(to bottom, #0033439a 0% 10%, #00334329);
       position: relative;
-      top: -50px;
+      top: -45px;
     }
   }
 }
@@ -49,4 +49,29 @@ swiper-slide {
     }
   }
 
+}
+
+@media (max-width:991px) {
+  .partener-info{
+    height: 400px !important;
+  }
+  .image-bg-border{
+    display: none;
+  }
+  .partener-details{
+    top: 0 !important;
+  }
+  h2{
+    font-size: 40px !important;
+  }
+  p{
+    width: 100% !important;
+    font-size: 18px !important;
+  }
+}
+
+@media (max-width:768px) {
+  .partener-info{
+    height:430px !important;
+  }
 }
