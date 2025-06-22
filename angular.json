@@ -32,11 +32,14 @@
             "styles": [
               "./node_modules/swiper/swiper-bundle.css",
               "./node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "./node_modules/animate.css/animate.min.css",
+              "./node_modules/wowjs/css/libs/animate.css",
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
             "scripts": [
-              "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+              "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "./node_modules/wowjs/dist/wow.min.js"
             ],
             "server": "src/main.server.ts",
             "prerender": true,

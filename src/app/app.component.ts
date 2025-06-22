@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from "./components/navbar/navbar.component";
 import { HomeComponent } from "./components/home/home.component";
@@ -6,6 +6,7 @@ import { OurProjectsComponent } from "./components/our-projects/our-projects.com
 import { ContractingComponent } from "./components/contracting/contracting.component";
 import { PartenersComponent } from "./components/parteners/parteners.component";
 import { WhoWeAreComponent } from "./components/who-we-are/who-we-are.component";
+import { NgwWowService } from 'ngx-wow';
 
 @Component({
   selector: 'app-root',
@@ -16,4 +17,7 @@ import { WhoWeAreComponent } from "./components/who-we-are/who-we-are.component"
 })
 export class AppComponent {
   title = 'MAMLKT-ELATAA';
+  constructor(private wowService:NgwWowService){
+    this.wowService.init()
+  }
 }
