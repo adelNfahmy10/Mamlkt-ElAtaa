@@ -1,7 +1,28 @@
-.mobile-image{
-  width: 40px;
-  transform: rotate(20deg);
-}
-.logo{
-  width: 140px;
+nav{
+  .mobile-image{
+    width: 30px;
+    transform: rotate(20deg);
+  }
+  .logo{
+    width: 100px;
+  }
+  .navbar-nav{
+    .nav-link{
+      color: #000;
+      padding: 5px 10px;
+      margin-inline: 5px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 14px;
+      border-radius: 30px;
+      -webkit-border-radius: 30px;
+      -moz-border-radius: 30px;
+      -ms-border-radius: 30px;
+      -o-border-radius: 30px;
+      &.active,&:hover{
+        background-color: #0033439a;
+        color: #fff;
+      }
+    }
+  }
 }

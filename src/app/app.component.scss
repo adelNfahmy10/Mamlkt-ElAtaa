@@ -1,0 +1,17 @@
+.arrowup{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+  background-color: #0033439a;
+  z-index: 9999;
+  i{
+    position: relative;
+    top: -3px;
+  }
+}
