@@ -1,8 +1,8 @@
 
 .who-we-are{
-  background-color: #003343;
-  color: #fff;
   .right{
+    color: #fff;
+    background: #003343;
     padding: 20px 100px 20px 0;
     .contact{
       .mobile-image{
@@ -16,7 +16,7 @@
           background-color: #000;
           transition: all .3s;
           i{
-            color: #a0a0a0a8;
+            color: #a0a0a0ce;
             transition: all .3s;
             font-size: 20px;
           }

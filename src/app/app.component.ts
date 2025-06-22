@@ -7,11 +7,12 @@ import { ContractingComponent } from "./components/contracting/contracting.compo
 import { PartenersComponent } from "./components/parteners/parteners.component";
 import { WhoWeAreComponent } from "./components/who-we-are/who-we-are.component";
 import { NgwWowService } from 'ngx-wow';
+import { FooterComponent } from "./components/footer/footer.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NavbarComponent, HomeComponent, OurProjectsComponent, ContractingComponent, PartenersComponent, WhoWeAreComponent],
+  imports: [NavbarComponent, HomeComponent, OurProjectsComponent, ContractingComponent, PartenersComponent, WhoWeAreComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
