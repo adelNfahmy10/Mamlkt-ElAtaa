@@ -5,15 +5,16 @@
     margin-left: auto;
     margin-right: auto;
   }
-
-  swiper-slide {
-    background-size: cover;
-    background-position: center;
-  }
-
   .mySwiper {
     height: 100%;
     width: 100%;
+    swiper-slide {
+    img {
+      width: 100%;
+      height: 100vh !important;
+      object-fit: cover;
+    }
+  }
   }
 
   .mySwiper2 {
@@ -21,9 +22,6 @@
     width:30%;
     box-sizing: border-box;
     padding: 10px 0;
-  }
-
-  .mySwiper2 {
     swiper-slide {
       height: 100%;
       opacity: 0.4;
@@ -33,21 +31,18 @@
       transition: all .3s;
       animation: rotate 3s linear infinite;
       margin-top: 10px;
-      transform: translateY(-10px)
+      transform: translateY(-10px);
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
     .swiper-slide-thumb-active {
       opacity: 1;
       animation: none;
       transition: all .3s;
-    }
-  }
-
-  swiper-slide {
-    img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
     }
   }
 
@@ -84,6 +79,7 @@
     width: 30% !important;
   }
 }
+
 @media (max-width:991px) {
   .mySwiper2 {
     width: 40% !important;
@@ -92,6 +88,7 @@
     font-size: 18px !important;
   }
 }
+
 @media (max-width:768px) {
   .mySwiper2 {
     width: 50% !important;
@@ -101,6 +98,7 @@
     right: 0% !important
   }
 }
+
 @media (max-width:567px) {
   .mySwiper2 {
     width: 100% !important;
