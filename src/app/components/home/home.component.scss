@@ -14,6 +14,11 @@
       height: 100vh !important;
       object-fit: cover;
     }
+    @media (max-width:567px) {
+      img {
+        height: 75vh !important;
+      }
+    }
   }
   }
 
