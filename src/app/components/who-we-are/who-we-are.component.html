@@ -5,10 +5,10 @@
         <div class="row g-3">
           <div class="col-md-6">
             <div class="who">
-               <h4 class="wow fadeInDown">من نكون</h4>
-                <p class="ps-3 wow fadeInRight">
-                  ما وجهان كانتا العدّ دول, مكن عرفها إنطلاق الفرنسي أن. هاربر إحتار البشريةً عل فصل, عل 0804 بالرغم ضرب, ان إحتار الأوروبية، حدى. إيو أن بقسوة فشكّل, إحكام سبتمبر وبلجيكا، كلا و. مع بلا والتي الثالث, بداية استمرار فصل أي. حادثة وانهاء الجنرال على 30, سكان وقامت للإتحاد.
-                </p>
+              <h4 class="wow fadeInDown">من نكون</h4>
+              @for (about of allAboutUs; track $index) {
+                <p class="ps-3 wow fadeInRight">- {{about.description}}</p>
+              }
             </div>
           </div>
 
@@ -20,23 +20,23 @@
                   <div class="d-flex align-items-center gap-1 wow fadeInRight">
                     <img src="assets/image/navbar/mobile.png" class="mobile-image" alt="sumou-mobile">
                     <div class="d-flex align-items-center flex-column">
-                      <a href="#">050007031</a>
-                      <a href="#">050007031</a>
+                      <a [href]="'https://wa.me/' + allContacts.phone1">{{allContacts.phone1}}</a>
+                      <a [href]="'https://wa.me/' + allContacts.phone2">{{allContacts.phone2}}</a>
                     </div>
                   </div>
                 </li>
                 <li>
-                  <div class="d-flex gap-1 wow fadeInRight">
+                  <div class="d-flex align-items-center gap-1 wow fadeInRight">
                     <i class="fa-solid fa-location-dot fs-4 mt-1"></i>
-                    <a href="#">خلاف وكسبت لم به،. ليرتفع الصفحات بعض عن. تم هناك المؤلّفة لمّ.</a>
+                    <a>{{allContacts.address}}</a>
                   </div>
                 </li>
                 <li>
                   <div class="d-flex align-items-center gap-2 icons">
-                    <a class="rounded-circle p-4 d-flex justify-content-center align-items-center wow bounceInUp" data-wow-delay="0s" href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a class="rounded-circle p-4 d-flex justify-content-center align-items-center wow bounceInUp" data-wow-delay="0.2s" href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a class="rounded-circle p-4 d-flex justify-content-center align-items-center wow bounceInUp" data-wow-delay="0.4s" href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a class="rounded-circle p-4 d-flex justify-content-center align-items-center wow bounceInUp" data-wow-delay="0.6s" href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a class="rounded-circle p-4 d-flex justify-content-center align-items-center wow bounceInUp" data-wow-delay="0s" [href]="allContacts.instagramUrl" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a class="rounded-circle p-4 d-flex justify-content-center align-items-center wow bounceInUp" data-wow-delay="0.2s" [href]="allContacts.twitterUrl" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a class="rounded-circle p-4 d-flex justify-content-center align-items-center wow bounceInUp" data-wow-delay="0.4s" [href]="allContacts.facebookUrl" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a class="rounded-circle p-4 d-flex justify-content-center align-items-center wow bounceInUp" data-wow-delay="0.6s" [href]="allContacts.linkedInUrl" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                   </div>
                 </li>
               </ul>

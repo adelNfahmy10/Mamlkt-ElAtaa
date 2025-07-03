@@ -2,16 +2,33 @@
   <div class="container">
     <div class="row g-4">
       <div class="col-xl-8 wow fadeIn">
-        <div class="contracting-info text-white p-5 pt-3 rounded-5 d-flex flex-column gap-2">
+        <div class="contracting-info text-white p-4 pt-3 rounded-5 d-flex flex-column gap-2">
           <h4 class="wow fadeInDown">المقاولات</h4>
-          <p class="wow fadeInUp">عادل الشتوية في حتى قام عضون كانتا مع بلا عن الحدود الشتوية واعتلاء أسيا الدمج والنفيس هو وقد العالم المشترك دار أي كلا تسبب للسيطرة على الاتحاد 30 يتم بالثقيل أوراقهم عن</p>
+          @for (contracing of allContracting; track $index) {
+            <p class="wow fadeInUp">- {{contracing.description}}</p>
+          }
           <ul class="list-unstyled p-0">
-            <li class="wow fadeInLeft"><i class="fa-solid fa-envelope"></i> طلب خدمة</li>
-            <li class="wow fadeInLeft"><i class="fa-brands fa-whatsapp"></i> اتصل واتس</li>
+            <li>
+              <a [href]="'mailto:' + allConfiguration?.email">
+                <i class="fa-solid fa-envelope"></i> طلب خدمة
+              </a>
+            </li>
+            <li>
+              <a [href]="'https://wa.me/' + allConfiguration.phoneNumber">
+                <i class="fa-brands fa-whatsapp"></i> اتصل واتس
+              </a>
+            </li>
           </ul>
         </div>
+
+
       </div>
       <div class="col-xl-4">
+        <!-- <div class="contractiong-image h-100 d-flex justify-content-center align-items-center wow fadeIn">
+          @for (contracting of allContracting; track $index) {
+            <img class="wow fadeInLeft" [src]="contracting.fileUrl" alt="contracting">
+          }
+        </div> -->
         <div class="contractiong-image h-100 d-flex justify-content-center align-items-center wow fadeIn">
           <img class="wow fadeInLeft" src="assets/image/contracting/excavator.png" alt="contracting">
         </div>
