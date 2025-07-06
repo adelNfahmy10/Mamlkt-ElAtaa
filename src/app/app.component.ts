@@ -4,16 +4,16 @@ import { NavbarComponent } from "./components/navbar/navbar.component";
 import { HomeComponent } from "./components/home/home.component";
 import { OurProjectsComponent } from "./components/our-projects/our-projects.component";
 import { ContractingComponent } from "./components/contracting/contracting.component";
-import { PartenersComponent } from "./components/parteners/parteners.component";
 import { WhoWeAreComponent } from "./components/who-we-are/who-we-are.component";
 import { NgwWowService } from 'ngx-wow';
 import { FooterComponent } from "./components/footer/footer.component";
 import { NgClass } from '@angular/common';
+import { ProjectofferComponent } from "./components/projectoffer/projectoffer.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NavbarComponent, HomeComponent, OurProjectsComponent, ContractingComponent, PartenersComponent, WhoWeAreComponent, FooterComponent, NgClass],
+  imports: [NavbarComponent, HomeComponent, OurProjectsComponent, ContractingComponent, WhoWeAreComponent, FooterComponent, NgClass, ProjectofferComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
