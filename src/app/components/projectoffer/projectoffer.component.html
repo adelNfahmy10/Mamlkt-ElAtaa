@@ -7,7 +7,7 @@
     [loop]="swiperConfig.loop" autoplay-delay="2500" autoplay-disable-on-interaction="false" autoplay-pause-on-mouse-enter="true" centered-slides="true" class="mySwipe mt-3">
       @for (project of allProject; track $index) {
         <swiper-slide class="wow bounceInUp" data-wow-delay="0s">
-          <div class="box-slide position-relative overflow-hidden">
+          <div class="box-slide position-relative overflow-hidden rounded-3">
             <img [src]="project.mainPicture" class="w-100 rounded-3" alt="sumou project">
             <div class="slide-info p-3 rounded-top-3 text-white d-flex flex-column gap-2">
               <div class="d-flex justify-content-between align-items-center">
