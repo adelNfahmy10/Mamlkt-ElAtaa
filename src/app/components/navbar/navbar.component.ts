@@ -19,9 +19,9 @@ export class NavbarComponent implements OnInit{
 
   @HostListener('window:scroll', []) onScroll(): void {
     for (const sectionId of this.sections) {
-      const section = document.getElementById(sectionId);
+      const section = document?.getElementById(sectionId);
       if (section) {
-        const rect = section.getBoundingClientRect();
+        const rect = section?.getBoundingClientRect();
         if (rect.top <= 100 && rect.bottom >= 100) {
           this.activeSection = sectionId;
           break;
