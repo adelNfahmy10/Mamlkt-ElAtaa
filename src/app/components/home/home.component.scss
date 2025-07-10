@@ -9,17 +9,17 @@
     height: 100%;
     width: 100%;
     swiper-slide {
-    img {
-      width: 100%;
-      height: 70vh !important;
-      object-fit: cover;
-    }
-    @media (max-width:567px) {
       img {
-        height: 50vh !important;
+        width: 100%;
+        height: 70vh !important;
+        object-fit: cover;
+      }
+      @media (max-width:567px) {
+        img {
+          height: 50vh !important;
+        }
       }
     }
-  }
   }
 
   .mySwiper2 {
@@ -66,7 +66,7 @@
   .round-image{
     width: 80px !important;
     height: 80px !important;
-    border: 2px solid greenyellow;
+    border: 2px solid #0EAD93;
   }
 
   .info-silde{
@@ -75,10 +75,13 @@
     right: 25%;
     width: 50%;
     padding: 10px;
-    font-size: 20px;
-    background-color: #000000a8;
+    font-size: 22px;
+    font-weight: bold;
+    background-color: #0ead92a7;
     color: #fff;
     text-align: center;
+    border-top-right-radius: 200px;
+    border-top-left-radius: 200px;
   }
 }
 
