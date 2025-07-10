@@ -1,11 +1,12 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, inject } from '@angular/core';
 import { SumouService } from '../../core/servcies/sumou/sumou.service';
 import { SwiperOptions } from 'swiper/types';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-projectoffer',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './projectoffer.component.html',
   styleUrl: './projectoffer.component.scss',
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
@@ -39,13 +40,24 @@ export class ProjectofferComponent {
     })
   }
 
-  swiperConfig: SwiperOptions = {
+ swiperConfig: SwiperOptions = {
     slidesPerView: 3,
     spaceBetween: 20,
+    centeredSlides: true,
     loop:true,
+    autoplay: {
+      delay: 1000,
+      disableOnInteraction: false
+    },
     breakpoints: {
-      768: { slidesPerView: 2, spaceBetween: 10 },
-      1024: { slidesPerView: 3, spaceBetween: 20 }
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      }
     }
   };
 }

@@ -1,4 +1,23 @@
 nav{
+  .navbar-toggler{
+    width: 80px;
+    height: 40px;
+    &:focus {
+      box-shadow: 0 0 5px 2px #0ead92ab;
+    }
+    .rotate {
+      display: inline-block;
+      transition: transform 0.4s ease;
+    }
+    span{
+      &.navbar-toggler-icon.rotate {
+        transform: rotate(0deg);
+      }
+      &.fa-xmark.rotate {
+        transform: rotate(180deg);
+      }
+    }
+  }
   .mobile-image{
     width: 30px;
     transform: rotate(20deg);
@@ -9,19 +28,37 @@ nav{
   .navbar-nav{
     .nav-link{
       color: #000;
-      padding: 5px 10px;
-      margin-inline: 5px;
-      text-align: left;
+      position: relative;
       font-weight: 700;
       font-size: 14px;
-      border-radius: 30px;
-      -webkit-border-radius: 30px;
-      -moz-border-radius: 30px;
-      -ms-border-radius: 30px;
-      -o-border-radius: 30px;
+      padding: 0;
+      &::before{
+        content:'';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 3px;
+        background-color: #0EAD93;
+        transition: all .3s;
+      }
       &.active,&:hover{
-        background-color: #0033439a;
-        color: #fff;
+        color: #0EAD93;
+      }
+      &.active::before,&:hover::before{
+        width: 70%;
+      }
+    }
+  }
+}
+
+@media (max-width:567px) {
+  .navbar-nav{
+    .nav-link{
+      text-align: left;
+      margin-bottom: 10px;
+      &.active::before,&:hover::before{
+        width: 20% !important;
       }
     }
   }

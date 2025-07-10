@@ -36,11 +36,11 @@
     }
     .slide-info{
       position: absolute;
-      bottom: -75%;
+      bottom: -35%;
       left: 0;
       width: 100%;
-      height: 90%;
-      background-color: #003343c8;
+      height: 50%;
+      background-color: #0ead92b4;
       transition: all .3s;
       span{
         font-weight: bold;
@@ -48,6 +48,19 @@
       .details{
         p{
           font-size: 18px;
+        }
+        .btn-book{
+          background-color: #036f62d3;
+          color: #fff;
+          i{
+            transition: all .3s;
+          }
+          &:hover{
+            background-color: #036f62;
+            i{
+              transform: translateX(2px) translateY(-2px);
+            }
+          }
         }
       }
     }

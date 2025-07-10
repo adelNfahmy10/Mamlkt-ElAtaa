@@ -10,8 +10,8 @@ import { Component, HostListener, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit{
   activeSection: string = 'home';
-
-  sections = ['home', 'project', 'contracting', 'parteners', 'whoWeAre'];
+  toggleIcon:boolean = true
+  sections = ['home', 'project', 'project-offer', 'contracting', 'whoWeAre'];
 
   ngOnInit(): void {
     this.onScroll();
@@ -32,5 +32,10 @@ export class NavbarComponent implements OnInit{
 
   setActive(sectionId: string) {
     this.activeSection = sectionId;
+  }
+
+  changeIcon():void{
+    this.toggleIcon = !this.toggleIcon;
+    console.log(this.toggleIcon);
   }
 }

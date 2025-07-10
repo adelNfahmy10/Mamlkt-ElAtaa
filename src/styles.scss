@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Edu+NSW+ACT+Hand+Pre:wght@400..700&family=Lexend+Deca:wght@100..900&family=Lobster&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 *{
   direction: rtl;
+  font-family: "Alexandria", sans-serif;
 }
 body{
   overflow-x: hidden;
@@ -8,6 +10,9 @@ body{
 a{
   text-decoration: none;
   color: inherit;
+}
+.cr{
+  cursor: pointer;
 }
 /* width */
 ::-webkit-scrollbar {

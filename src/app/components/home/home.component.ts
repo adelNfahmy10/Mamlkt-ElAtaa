@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, inject, OnInit, ViewChild } from '@angular/core';
 import { SumouService } from '../../core/servcies/sumou/sumou.service';
+import { SwiperOptions } from 'swiper/types';
 
 @Component({
   selector: 'app-home',
@@ -41,5 +42,20 @@ export class HomeComponent implements AfterViewInit, OnInit{
     })
   }
 
-
+  swiperConfig: SwiperOptions = {
+    breakpoints: {
+      1200: {
+        slidesPerView: 5,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+      0: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      }
+    }
+  };
 }

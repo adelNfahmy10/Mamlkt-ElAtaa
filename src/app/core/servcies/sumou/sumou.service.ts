@@ -58,7 +58,7 @@ export class SumouService {
     return this._HttpClient.get(`${this.baseUrl}api/Projects/GetAllRealEstateOffers`)
   }
 
-  GetProjectById(id:number):Observable<any>{
+  GetProjectById(id:any):Observable<any>{
     return this._HttpClient.get(`${this.baseUrl}api/Projects/GetProjectById/${id}`)
   }
 }

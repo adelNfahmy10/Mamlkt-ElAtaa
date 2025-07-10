@@ -2,8 +2,13 @@
 .who-we-are{
   .right{
     color: #fff;
-    background: #003343;
+    background: #0ead92;
     padding: 20px 100px 20px 0;
+    .who{
+      p{
+        text-align: justify;
+      }
+    }
     .contact{
       .mobile-image{
         width: 40px;
@@ -13,15 +18,15 @@
         a{
           width: 20px;
           height: 20px;
-          background-color: #000;
+          background-color: #036F62;
           transition: all .3s;
           i{
-            color: #a0a0a0ce;
+            color: #fff;
             transition: all .3s;
             font-size: 20px;
           }
           &:hover{
-            background-color: #005872;
+            background-color: #03d5bd;
             i{
               color: #fff;
             }

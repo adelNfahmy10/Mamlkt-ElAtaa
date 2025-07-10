@@ -1,10 +1,12 @@
-<section id="project" class="projects py-3">
+<section id="project-offer" class="projects py-3">
   <div class="container">
     <h2 class="text-center wow fadeInDown">العروض العقارية</h2>
-    <swiper-container [slides-per-view]="swiperConfig.slidesPerView"
-    [space-between]="swiperConfig.spaceBetween"
-    [breakpoints]="swiperConfig.breakpoints"
-    [loop]="swiperConfig.loop" autoplay-delay="2500" autoplay-disable-on-interaction="false" autoplay-pause-on-mouse-enter="true" centered-slides="true" class="mySwipe mt-3">
+    <swiper-container class="mySwiper py-3"
+      [breakpoints]="swiperConfig.breakpoints"
+      space-between="20"
+      autoplay-delay="2500" autoplay-disable-on-interaction="false"
+      autoplay-pause-on-mouse-enter="true"
+      centered-slides="false">
       @for (project of allProject; track $index) {
         <swiper-slide class="wow bounceInUp" data-wow-delay="0s">
           <div class="box-slide position-relative overflow-hidden rounded-3">
@@ -22,19 +24,22 @@
                 </li>
               </ul>
               <div class="details">
-                <p>{{project.description}}</p>
-                <ul class="list-unstyled p-0 d-flex gap-3">
-                  <li>
+                <!-- <p>{{ project.description.split(' ').slice(0, 10).join(' ') }}</p> -->
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="d-flex flex-column gap-1">
                     <a [href]="'mailto:' + allConfiguration?.email">
                       <i class="fa-solid fa-envelope"></i> طلب خدمة
                     </a>
-                  </li>
-                  <li>
+
                     <a [href]="'https://wa.me/' + allConfiguration.phoneNumber">
                       <i class="fa-brands fa-whatsapp"></i> اتصل واتس
                     </a>
-                  </li>
-                </ul>
+                  </div>
+
+                  <div>
+                    <button class="btn btn-book" [routerLink]="['/project-details/' + project.id]"> <i class="fa-solid fa-arrow-trend-up"></i> عرض المزيد</button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

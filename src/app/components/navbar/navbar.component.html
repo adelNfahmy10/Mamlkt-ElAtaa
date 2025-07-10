@@ -1,11 +1,11 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary position-sticky top-0 start-0 z-3 animate__animated animate__fadeInDown">
   <div class="container">
     <a class="navbar-brand" href="#home"><img src="assets/image/navbar/logo.png" class="logo" alt="sumou"></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button (click)="changeIcon()" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span [class]="toggleIcon ? 'navbar-toggler-icon' : 'fa-solid fa-xmark fs-1'" class="rotate"></span>
     </button>
     <div class="collapse navbar-collapse align-items-center" id="navbarNav">
-      <ul class="navbar-nav mx-auto">
+      <ul class="navbar-nav mx-auto gap-4">
         <li class="nav-item">
           <a class="nav-link" [ngClass]="{ active: activeSection === 'home' }" (click)="setActive('home')" href="#home">الرئيسية</a>
         </li>
@@ -13,13 +13,10 @@
           <a class="nav-link" [ngClass]="{ active: activeSection === 'project' }" (click)="setActive('project')" href="#project">مشاريع التمليك</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [ngClass]="{ active: activeSection === 'contracting' }" (click)="setActive('contracting')" href="#contracting">مقاولات</a>
+          <a class="nav-link" [ngClass]="{ active: activeSection === 'project-offer' }" (click)="setActive('project-offer')" href="#project-offer">العروض العقارية</a>
         </li>
-        <!-- <li class="nav-item">
-          <a class="nav-link" [ngClass]="{ active: activeSection === 'home' }" (click)="setActive('home')" href="#">منتجات</a>
-        </li> -->
         <li class="nav-item">
-          <a class="nav-link" [ngClass]="{ active: activeSection === 'parteners' }" (click)="setActive('parteners')" href="#parteners">شركاؤنا</a>
+          <a class="nav-link" [ngClass]="{ active: activeSection === 'contracting' }" (click)="setActive('contracting')" href="#contracting">مقاولات</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" [ngClass]="{ active: activeSection === 'whoWeAre' }" (click)="setActive('#whoWeAre')" href="#whoWeAre">من نحن</a>
