@@ -23,7 +23,6 @@ export class WhoWeAreComponent implements OnInit{
     this._SumouService.GetAllContacts().subscribe({
       next:(res)=>{
         this.allContacts = res.data[0]
-        console.log(this.allContacts);
       }
     })
   }
@@ -32,7 +31,6 @@ export class WhoWeAreComponent implements OnInit{
     this._SumouService.getAllAboutUs().subscribe({
       next:(res)=>{
         this.allAboutUs = res.data
-        console.log(this.allAboutUs);
       }
     })
   }

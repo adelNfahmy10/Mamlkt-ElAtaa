@@ -34,8 +34,6 @@ export class ProjectofferComponent {
     this._SumouService.GetAllConfigurations().subscribe({
       next:(res)=>{
         this.allConfiguration = res.data[0]
-        console.log(this.allConfiguration);
-
       }
     })
   }
