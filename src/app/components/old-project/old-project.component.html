@@ -1,0 +1,19 @@
+<section id="project-offer" class="projects py-3">
+  <div class="container">
+    <h2 class="text-center wow fadeInDown">مشاريعنا السابقة</h2>
+    <swiper-container dir="ltr" class="mySwiper py-3"
+      [breakpoints]="swiperConfig.breakpoints"
+      space-between="20"
+      autoplay-delay="2500" autoplay-disable-on-interaction="false"
+      autoplay-pause-on-mouse-enter="true"
+      centered-slides="false">
+      @for (project of oldProjectImages; track $index) {
+        <swiper-slide class="wow bounceInUp" data-wow-delay="0s">
+          <div class="box-slide position-relative overflow-hidden rounded-3">
+            <img [src]="project" class="w-100 rounded-3" alt="sumou project">
+          </div>
+        </swiper-slide>
+      }
+    </swiper-container>
+  </div>
+</section>

@@ -4,7 +4,7 @@
     @for (header of allHeadersImage; track $index) {
       <swiper-slide>
         <div class="position-relative">
-            <img [src]="header.mainPicture" />
+            <img [src]="header.picture" />
             <p class="info-silde mb-0">{{header.title}}</p>
         </div>
       </swiper-slide>
@@ -14,7 +14,7 @@
   <swiper-container class="mySwiper2" [breakpoints]="swiperConfig.breakpoints" autoplay-delay="2500" space-between="20" slides-per-view="5" free-mode="true" watch-slides-progress="true">
     @for (slideHeader of allHeadersImage; track $index) {
       <swiper-slide class="wow bounceInUp" data-wow-delay="0s">
-        <img class="rounded-circle round-image" [src]="slideHeader.mainPicture" />
+        <img class="rounded-circle round-image" [src]="slideHeader.picture" />
       </swiper-slide>
     }
   </swiper-container>
