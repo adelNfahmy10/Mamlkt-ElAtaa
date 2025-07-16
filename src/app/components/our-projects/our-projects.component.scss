@@ -36,12 +36,15 @@
     }
     .slide-info{
       position: absolute;
-      bottom: -35%;
+      bottom: -37%;
       left: 0;
       width: 100%;
       height: 50%;
       background-color: #0ead92b4;
       transition: all .3s;
+      h4{
+        font-size: 18px;
+      }
       span{
         font-weight: bold;
       }
