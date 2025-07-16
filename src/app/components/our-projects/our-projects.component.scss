@@ -43,10 +43,11 @@
       background-color: #0ead92b4;
       transition: all .3s;
       h4{
-        font-size: 18px;
+        font-size: 16px;
+        font-weight: bold;
       }
       span{
-        font-weight: bold;
+        font-size: 12px;
       }
       .details{
         p{
@@ -55,6 +56,7 @@
         .btn-book{
           background-color: #036f62d3;
           color: #fff;
+          font-size: 14px;
           i{
             transition: all .3s;
           }

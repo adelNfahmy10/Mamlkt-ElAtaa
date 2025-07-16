@@ -1,62 +1,64 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, inject } from '@angular/core';
 import { SwiperOptions } from 'swiper/types';
 import { SumouService } from '../../core/servcies/sumou/sumou.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-old-project',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './old-project.component.html',
   styleUrl: './old-project.component.scss',
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class OldProjectComponent {
-   private readonly _SumouService = inject(SumouService)
+  private readonly _SumouService = inject(SumouService)
 
-    allProject:any[] = []
-    oldProjectImages:string[] = [
-      './assets/image/old-project/1.jpg',
-      './assets/image/old-project/2.jpg',
-      './assets/image/old-project/3.jpg',
-      './assets/image/old-project/4.jpg',
-      './assets/image/old-project/5.jpg',
-      './assets/image/old-project/6.jpg',
-      './assets/image/old-project/7.jpg',
-      './assets/image/old-project/8.jpg',
-      './assets/image/old-project/9.jpg',
-      './assets/image/old-project/10.jpg',
-      './assets/image/old-project/11.jpg',
-      './assets/image/old-project/12.jpg',
-      './assets/image/old-project/13.jpg',
-      './assets/image/old-project/14.jpg',
-      './assets/image/old-project/15.jpg',
-      './assets/image/old-project/16.jpg',
-      './assets/image/old-project/17.jpg',
-    ]
-    allConfiguration:any
+  allProject:any[] = []
+  projectData:any
+  oldProjectImages:string[] = [
+    './assets/image/old-project/1.jpg',
+    './assets/image/old-project/2.jpg',
+    './assets/image/old-project/3.jpg',
+    './assets/image/old-project/4.jpg',
+    './assets/image/old-project/5.jpg',
+    './assets/image/old-project/6.jpg',
+    './assets/image/old-project/7.jpg',
+    './assets/image/old-project/8.jpg',
+    './assets/image/old-project/9.jpg',
+    './assets/image/old-project/10.jpg',
+    './assets/image/old-project/11.jpg',
+    './assets/image/old-project/12.jpg',
+    './assets/image/old-project/13.jpg',
+    './assets/image/old-project/14.jpg',
+    './assets/image/old-project/15.jpg',
+    './assets/image/old-project/16.jpg',
+    './assets/image/old-project/17.jpg',
+  ]
 
-    ngOnInit():void {
-      this.getAllProjects()
-      this.getAllConfigurations()
-    }
+  ngOnInit():void {
+    this.GetAllPreviousInvestments()
+  }
 
-    getAllProjects():void{
-      this._SumouService.GetAllRealEstateOffers().subscribe({
-        next:(res)=>{
-          this.allProject = res.data
-        }
-      })
-    }
+  GetAllPreviousInvestments():void{
+    this._SumouService.GetAllPreviousInvestments().subscribe({
+      next:(res)=>{
+        this.allProject = res.data
+        console.log(this.allProject);
 
-    getAllConfigurations():void{
-      this._SumouService.GetAllConfigurations().subscribe({
-        next:(res)=>{
-          this.allConfiguration = res.data[0]
-        }
-      })
-    }
+      }
+    })
+  }
 
-   swiperConfig: SwiperOptions = {
+  getProjectDataById(id:number):void{
+    this._SumouService.GetPreviousInvestmentById(id).subscribe({
+      next:(res)=>{
+        this.projectData = res.data
+      }
+    })
+  }
+
+  swiperConfig: SwiperOptions = {
       slidesPerView: 3,
       spaceBetween: 20,
       centeredSlides: true,
@@ -75,5 +77,5 @@ export class OldProjectComponent {
           spaceBetween: 20,
         }
       }
-    };
+  };
 }

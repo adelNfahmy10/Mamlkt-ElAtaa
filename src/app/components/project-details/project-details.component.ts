@@ -3,12 +3,11 @@ import { SumouService } from '../../core/servcies/sumou/sumou.service';
 import { ActivatedRoute } from '@angular/router';
 import { NavbarComponent } from "../navbar/navbar.component";
 import { FooterComponent } from "../footer/footer.component";
-import { NewLinePipe } from '../../core/pipes/newLine/new-line.pipe';
 
 @Component({
   selector: 'app-project-details',
   standalone: true,
-  imports: [NavbarComponent, FooterComponent, NewLinePipe],
+  imports: [NavbarComponent, FooterComponent],
   templateUrl: './project-details.component.html',
   styleUrl: './project-details.component.scss',
   schemas:[CUSTOM_ELEMENTS_SCHEMA]

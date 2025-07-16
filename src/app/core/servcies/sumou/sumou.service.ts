@@ -41,6 +41,16 @@ export class SumouService {
   GetContractingById(id:number):Observable<any>{
     return this._HttpClient.get(`${this.baseUrl}api/Contracting/GetContractingById/${id}`)
   }
+
+  /* Previous Investments ############################################################# */
+  GetAllPreviousInvestments():Observable<any>{
+    return this._HttpClient.get(`${this.baseUrl}api/PreviousInvestments/GetAll`)
+  }
+
+  GetPreviousInvestmentById(id:number):Observable<any>{
+    return this._HttpClient.get(`${this.baseUrl}api/PreviousInvestments/GetById/${id}`)
+  }
+
   /* Projects ############################################################# */
   GetAllProjects():Observable<any>{
     return this._HttpClient.get(`${this.baseUrl}api/Projects/GetAllProjects`)

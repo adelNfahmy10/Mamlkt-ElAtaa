@@ -21,18 +21,18 @@
                   <span><i class="fa-solid fa-bed"></i> ({{project.roomNumbers}}) غرف</span>
                   <span><i class="fa-solid fa-subscript"></i> 500 م<sup>2</sup></span>
                 </li>
-                <li class="d-flex align-items-center mt-1"><a [href]="project.location"><i class="fa-solid fa-location-dot"></i> {{project.city}} مدينة - {{ project.area }} منطقة</a></li>
+                <li class="d-flex align-items-center mt-1"><a [href]="project.location"><span><i class="fa-solid fa-location-dot"></i> {{project.city}} مدينة - {{ project.area }} منطقة</span></a></li>
               </ul>
               <div class="details">
                 <!-- <p>{{ project.description.split(' ').slice(0, 10).join(' ') }}</p> -->
                 <div class="d-flex align-items-center justify-content-between">
-                  <div class="d-flex flex-column gap-1">
+                  <div class="d-flex flex-column gap-0">
                     <a [href]="'mailto:' + allConfiguration?.email">
-                      <i class="fa-solid fa-envelope"></i> طلب خدمة
+                      <span><i class="fa-solid fa-envelope"></i> طلب خدمة</span>
                     </a>
 
                     <a [href]="'https://wa.me/' + allConfiguration?.phoneNumber">
-                      <i class="fa-brands fa-whatsapp"></i> اتصل واتس
+                      <span><i class="fa-brands fa-whatsapp"></i> اتصل واتس</span>
                     </a>
                   </div>
 

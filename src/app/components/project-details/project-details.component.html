@@ -39,23 +39,23 @@
 
               <div class="row text-secondary mb-4">
                 <div class="col-6 mb-2">
-                  <strong>💰 السعر:</strong> {{ projectData.price }}
+                  <strong>السعر:</strong> {{ projectData.price }}
                 </div>
                 <div class="col-6 mb-2">
-                  <strong>🛏 عدد الغرف:</strong> {{ projectData.roomNumbers }}
+                  <strong>عدد الغرف:</strong> {{ projectData.roomNumbers }}
                 </div>
                 <div class="col-6 mb-2">
-                  <strong>🏙 المدينة:</strong> {{ projectData.city }}
+                  <strong>المدينة:</strong> {{ projectData.city }}
                 </div>
                 <div class="col-6 mb-2">
-                  <strong>📐 المساحة:</strong> {{ projectData.area }}
+                  <strong>المنطقة:</strong> {{ projectData.area }}
                 </div>
                 <div class="col-12">
-                  <strong>📍الموقع:</strong> {{ projectData.location }}
+                  <strong>الموقع: </strong> <a [href]="projectData.location" class="location"> إتجة للموقع <i class="fa-solid fa-arrow-trend-up"></i></a>
                 </div>
               </div>
 
-              <p class="card-text text-muted mb-4" [innerHTML]="projectData.description | newLine"></p>
+              <div [innerHTML]="projectData.description"></div>
 
               <button class="btn btn-book w-100 text-white fw-medium">احجز الآن</button>
             </div>
