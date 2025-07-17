@@ -1,13 +1,13 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, inject, ViewChild } from '@angular/core';
 import { SumouService } from '../../core/servcies/sumou/sumou.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { NavbarComponent } from "../navbar/navbar.component";
 import { FooterComponent } from "../footer/footer.component";
 
 @Component({
   selector: 'app-project-details',
   standalone: true,
-  imports: [NavbarComponent, FooterComponent],
+  imports: [NavbarComponent, FooterComponent, RouterLink],
   templateUrl: './project-details.component.html',
   styleUrl: './project-details.component.scss',
   schemas:[CUSTOM_ELEMENTS_SCHEMA]

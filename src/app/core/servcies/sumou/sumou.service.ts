@@ -33,6 +33,11 @@ export class SumouService {
   GetContactById(id:number):Observable<any>{
     return this._HttpClient.get(`${this.baseUrl}api/Contacts/GetContactById/${id}`)
   }
+
+  createContactUs(data:any):Observable<any>{
+    return this._HttpClient.post(`${this.baseUrl}api/ContactUs/CreateContactUs`, data)
+  }
+
   /* Contracting ############################################################# */
   GetAllContracting():Observable<any>{
     return this._HttpClient.get(`${this.baseUrl}api/Contracting/GetAllContracting`)

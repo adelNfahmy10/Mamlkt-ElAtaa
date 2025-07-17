@@ -10,7 +10,7 @@
 
   <div class="container">
     <div class="card shadow-lg border-0 p-3 my-3">
-      <div class="row">
+      <div class="row g-3">
         <div class="col-12">
           <swiper-container style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="mySwiper"
             thumbs-swiper=".mySwiper2" autoplay-delay="2500" space-between="10" navigation="false">
@@ -31,23 +31,22 @@
           </swiper-container>
         </div>
 
-
         <div class="col-12">
           <div class="card border-0 shadow-sm">
             <div class="card-body p-4 d-flex flex-column justify-content-evenly">
               <h2 class="card-title h4 fw-bold mb-3">{{ projectData.title }}</h2>
 
               <div class="row g-3 text-secondary mb-4">
-                <div class="col-md-6">
+                <div class="col-md-3">
                   <strong>السعر:</strong> {{ projectData.price }}
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-3">
                   <strong>عدد الغرف:</strong> {{ projectData.roomNumbers }}
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-3">
                   <strong>المدينة:</strong> {{ projectData.city }}
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-3">
                   <strong>المنطقة:</strong> {{ projectData.area }}
                 </div>
                 <div class="col-12">
@@ -57,7 +56,21 @@
 
               <div [innerHTML]="projectData.description"></div>
 
-              <button class="btn btn-book w-100 text-white fw-medium">احجز الآن</button>
+              <div class="row g-2 mt-3">
+                <div class="col-md-6">
+                  <button class="btn btn-book w-100 text-white fw-medium d-flex justify-content-center align-items-center gap-2" [routerLink]="['/book/' + projectData.id]" >
+                    <span>احجز الآن</span>
+                    <i class="fa-solid fa-address-book text-white fs-5"></i>
+                  </button>
+                </div>
+
+                <div class="col-md-6">
+                   <a href="https://wa.me/050007031" class="btn btn-book w-100 text-white fw-medium d-flex justify-content-center align-items-center gap-2">
+                    <span>احجز عبر واتساب</span>
+                    <i class="fa-brands fa-whatsapp text-white fs-4"></i>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
