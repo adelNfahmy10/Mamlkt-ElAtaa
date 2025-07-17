@@ -65,11 +65,6 @@ export class BookComponent {
   })
 
   submitContactForm():void{
-    if (this.contactForm.invalid) {
-      this.contactForm.markAllAsTouched();
-      return;
-    }
-    if(this.contactForm.valid){
     let data = this.contactForm.value
     data.projectId = this.projectId
 
@@ -87,6 +82,5 @@ export class BookComponent {
         });
       }
     })
-    }
   }
 }
