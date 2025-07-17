@@ -60,7 +60,8 @@ export class BookComponent {
     projectId: ['', Validators.required],
     fullName: ['', Validators.required],
     phoneNumber: ['', Validators.required],
-    location: ['', Validators.required]
+    location: ['', Validators.required],
+    message: ['', Validators.required]
   })
 
   submitContactForm():void{

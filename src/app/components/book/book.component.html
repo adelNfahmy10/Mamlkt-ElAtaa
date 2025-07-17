@@ -38,6 +38,16 @@
                 }
               </div>
 
+              <div class="col-12 animate__animated animate__fadeInUp animate__delay-0.6s">
+                <label class="form-label" for="message">رســالتك</label>
+                <textarea [ngClass]="{'is-invalid': contactForm.get('message')?.invalid && contactForm.get('message')?.touched}" formControlName="message" class="form-control" id="message" name="message" placeholder="اترك رســــألتك..."></textarea>
+                @if(contactForm.get('message')?.invalid && contactForm.get('message')?.touched){
+                  <div class="invalid-feedback">
+                    من فضلك أدخل رســالتك
+                  </div>
+                }
+              </div>
+
               <div class="col-12 animate__animated animate__fadeInUp animate__delay-0.8s">
                 <button class="btn btn-book w-100 text-white fw-medium d-flex justify-content-center align-items-center gap-2">
                   <span>احـجـــز الأن</span>
