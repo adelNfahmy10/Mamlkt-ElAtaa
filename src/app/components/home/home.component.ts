@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, inject, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, inject, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { SumouService } from '../../core/servcies/sumou/sumou.service';
 import { SwiperOptions } from 'swiper/types';
 
@@ -12,8 +12,11 @@ import { SwiperOptions } from 'swiper/types';
 })
 export class HomeComponent implements AfterViewInit, OnInit{
   private readonly _SumouService = inject(SumouService)
+  private readonly _Renderer2 = inject(Renderer2)
 
   @ViewChild('mainSwiper') mainSwiper!: ElementRef<HTMLElement>
+  @ViewChild('heading') headingRef!: ElementRef;
+
   allHeadersImage:any[] = []
 
   ngAfterViewInit(): void {
@@ -28,6 +31,19 @@ export class HomeComponent implements AfterViewInit, OnInit{
         swiperEl.swiper.autoplay.start();
       });
     }
+
+    const heading = this.headingRef.nativeElement;
+    // Listen for animation end
+    heading.addEventListener('animationend', () => {
+      setTimeout(() => {
+        // Remove the initial animation classes
+        this._Renderer2.removeClass(heading, 'animate__backInDown');
+        this._Renderer2.removeClass(heading, 'animate__delay-1s');
+
+        // Add the exit animation class
+        this._Renderer2.addClass(heading, 'animate__backOutLeft');
+      }, 4000);
+    });
   }
 
   ngOnInit():void {

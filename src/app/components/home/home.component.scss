@@ -1,4 +1,14 @@
 .home{
+  position: relative;
+  h1{
+    position: absolute;
+    font-size: 30px;
+    top: 20%;
+    right: 0;
+    color: #fff;
+    background-color: #0ead92a7;
+    padding: 10px 20px;
+  }
   swiper-container {
     width: 100%;
     height: 100%;
