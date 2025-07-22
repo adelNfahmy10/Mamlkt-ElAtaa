@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, inject, OnInit } from '@angular/core';
 import { FooterComponent } from "../footer/footer.component";
 import { NavbarComponent } from "../navbar/navbar.component";
 import { SumouService } from '../../core/servcies/sumou/sumou.service';
@@ -9,7 +9,8 @@ import { ActivatedRoute } from '@angular/router';
   standalone: true,
   imports: [FooterComponent, NavbarComponent],
   templateUrl: './investment-details.component.html',
-  styleUrl: './investment-details.component.scss'
+  styleUrl: './investment-details.component.scss',
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class InvestmentDetailsComponent implements OnInit{
   private readonly _SumouService = inject(SumouService)

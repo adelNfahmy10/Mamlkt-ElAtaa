@@ -4,9 +4,9 @@
   <div class="container">
     <div class="row g-3">
       <div class="col-md-6">
-         <div class="card shadow-lg border-0 p-3">
+         <div class="card shadow-lg border-0 p-3 h-100">
           <h3 class="mb-0 animate__animated animate__fadeInUp">إحــجــز الأن</h3>
-          <div class="card-body p-4 d-flex flex-column justify-content-evenly">
+          <div class="card-body p-3">
             <form class="row g-3" [formGroup]="contactForm" (ngSubmit)="submitContactForm()">
               <div class="col-12 animate__animated animate__fadeInUp animate__delay-0.2s">
                 <label class="form-label" for="fullName">الأســم</label>
@@ -62,10 +62,24 @@
       <div class="col-md-6">
         <div class="card p-3">
           <div class="main-image">
-            <img [src]="projectData.projectDetails[0].picture" class="w-100 object-fit-cover animate__animated animate__fadeInDown" [alt]="projectData.title">
-            <div class="overlay-content">
-              <h2 class="animate__animated animate__bounceInRight animate__slow">{{projectData.title}}</h2>
-            </div>
+          <h2 class="animate__animated animate__bounceInRight animate__slow z-2">{{projectData.title}}</h2>
+          <swiper-container style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="mySwiper"
+            thumbs-swiper=".mySwiper2" autoplay-delay="2500" space-between="10" navigation="false">
+            @for (image of projectData.projectDetails; track $index) {
+              <swiper-slide>
+                <img class="main-image" [src]="image.picture" [alt]="image.title" />
+              </swiper-slide>
+            }
+          </swiper-container>
+
+          <swiper-container class="mySwiper2" space-between="10" slides-per-view="4" free-mode="true"
+            watch-slides-progress="true">
+            @for (image of projectData.projectDetails; track $index) {
+              <swiper-slide>
+                <img class="main-image" [src]="image.picture" [alt]="image.title" />
+              </swiper-slide>
+            }
+          </swiper-container>
           </div>
         </div>
       </div>
