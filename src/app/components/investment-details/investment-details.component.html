@@ -2,7 +2,7 @@
 
 <section class="prodcut-details">
   <div class="main-image">
-    <img [src]="investmentData.images[0].image" class="w-100 object-fit-cover" [alt]="investmentData.description">
+    <img loading="lazy" [src]="investmentData.images[0].image" class="w-100 object-fit-cover" [alt]="investmentData.description">
     <div class="overlay-content">
       <h2 [innerHTML]="investmentData.title"></h2>
     </div>
@@ -15,7 +15,7 @@
       @for (item of investmentData.images; track $index) {
         <div class="col-md-3">
           <div class="card border-0 shadow h-100">
-            <img [src]="item.image" class="w-100 h-100 object-fit-cover" [alt]="investmentData.description">
+            <img loading="lazy" [src]="item.image" class="w-100 h-100 object-fit-cover" [alt]="investmentData.description">
           </div>
         </div>
       }

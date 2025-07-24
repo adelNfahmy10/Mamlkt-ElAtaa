@@ -10,7 +10,7 @@
       @for (project of allProject; track $index) {
         <swiper-slide class="wow bounceInUp" data-wow-delay="0s">
           <div class="box-slide position-relative overflow-hidden rounded-3" >
-            <img [src]="project.images[0].image" class="w-100 rounded-3" alt="sumou project">
+            <img loading="lazy" [src]="project.images[0].image" class="w-100 rounded-3" alt="sumou">
             <div class="slide-info p-3 rounded-top-3 text-white d-flex flex-column gap-2">
               <button class="btn details rounded-circle" [routerLink]="['/previour-investment/' + project.id]"> <i class="fa-solid fa-arrow-trend-up"></i> المزيد</button>
             </div>

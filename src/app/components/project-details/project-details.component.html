@@ -2,7 +2,7 @@
 
 <section class="prodcut-details">
   <div class="main-image">
-    <img [src]="projectData.projectDetails[0].picture" class="w-100 object-fit-cover" [alt]="projectData.title">
+    <img loading="lazy" [src]="projectData.projectDetails[0].picture" class="w-100 object-fit-cover" [alt]="projectData.title">
     <div class="overlay-content">
       <h2>{{projectData.title}}</h2>
     </div>
@@ -16,7 +16,7 @@
             thumbs-swiper=".mySwiper2" autoplay-delay="2500" space-between="10" navigation="false">
             @for (image of projectData.projectDetails; track $index) {
               <swiper-slide>
-                <img class="main-image" [src]="image.picture" [alt]="image.title" />
+                <img loading="lazy" class="main-image" [src]="image.picture" [alt]="image.title" />
               </swiper-slide>
             }
           </swiper-container>
@@ -25,7 +25,7 @@
             watch-slides-progress="true">
             @for (image of projectData.projectDetails; track $index) {
               <swiper-slide>
-                <img class="main-image" [src]="image.picture" [alt]="image.title" />
+                <img loading="lazy" class="main-image" [src]="image.picture" [alt]="image.title" />
               </swiper-slide>
             }
           </swiper-container>

@@ -67,7 +67,7 @@
             thumbs-swiper=".mySwiper2" autoplay-delay="2500" space-between="10" navigation="false">
             @for (image of projectData.projectDetails; track $index) {
               <swiper-slide>
-                <img class="main-image" [src]="image.picture" [alt]="image.title" />
+                <img loading="lazy" class="main-image" [src]="image.picture" [alt]="image.title" />
               </swiper-slide>
             }
           </swiper-container>
@@ -76,7 +76,7 @@
             watch-slides-progress="true">
             @for (image of projectData.projectDetails; track $index) {
               <swiper-slide>
-                <img class="main-image" [src]="image.picture" [alt]="image.title" />
+                <img loading="lazy" class="main-image" [src]="image.picture" [alt]="image.title" />
               </swiper-slide>
             }
           </swiper-container>
