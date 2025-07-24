@@ -1,18 +1,16 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, inject, OnInit } from '@angular/core';
-import { SwiperOptions } from 'swiper/types';
+import { Component, inject } from '@angular/core';
 import { SumouService } from '../../core/servcies/sumou/sumou.service';
 import { RouterLink } from '@angular/router';
 import { NgClass } from '@angular/common';
 
 @Component({
-  selector: 'app-our-projects',
+  selector: 'app-our-project-page',
   standalone: true,
   imports: [RouterLink, NgClass],
-  templateUrl: './our-projects.component.html',
-  styleUrl: './our-projects.component.scss',
-  schemas:[CUSTOM_ELEMENTS_SCHEMA]
+  templateUrl: './our-project-page.component.html',
+  styleUrl: './our-project-page.component.scss'
 })
-export class OurProjectsComponent implements OnInit{
+export class OurProjectPageComponent {
   private readonly _SumouService = inject(SumouService)
 
   allProject:any[] = []
@@ -27,7 +25,7 @@ export class OurProjectsComponent implements OnInit{
   getAllProjects():void{
     this._SumouService.GetAllOwnershipProjects().subscribe({
       next:(res)=>{
-        this.allProject = res.data
+        this.allProject = res.data.map((project:any) => ({...project, arrow: false}));
       }
     })
   }
@@ -40,24 +38,8 @@ export class OurProjectsComponent implements OnInit{
     })
   }
 
-  swiperConfig: SwiperOptions = {
-    breakpoints: {
-      1200: {
-        slidesPerView: 3,
-        spaceBetween: 20,
-      },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      0: {
-        slidesPerView: 1,
-        spaceBetween: 20,
-      }
-    }
-  };
-
   toggleArrow(project: any) {
     project.arrow = !project.arrow;
   }
+
 }

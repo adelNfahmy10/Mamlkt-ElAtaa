@@ -1,18 +1,16 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { SumouService } from '../../core/servcies/sumou/sumou.service';
-import { SwiperOptions } from 'swiper/types';
 import { RouterLink } from '@angular/router';
 import { NgClass } from '@angular/common';
 
 @Component({
-  selector: 'app-projectoffer',
+  selector: 'app-projectoffer-page',
   standalone: true,
   imports: [RouterLink, NgClass],
-  templateUrl: './projectoffer.component.html',
-  styleUrl: './projectoffer.component.scss',
-  schemas:[CUSTOM_ELEMENTS_SCHEMA]
+  templateUrl: './projectoffer-page.component.html',
+  styleUrl: './projectoffer-page.component.scss'
 })
-export class ProjectofferComponent {
+export class ProjectofferPageComponent {
   private readonly _SumouService = inject(SumouService)
 
   allProject:any[] = []
@@ -43,27 +41,4 @@ export class ProjectofferComponent {
   toggleArrow(project: any) {
     project.arrow = !project.arrow;
   }
-
-  swiperConfig: SwiperOptions = {
-    slidesPerView: 3,
-    spaceBetween: 20,
-    centeredSlides: true,
-    loop:true,
-    autoplay: {
-      delay: 1000,
-      disableOnInteraction: false
-    },
-    breakpoints: {
-      1200: {
-        slidesPerView: 3,
-        spaceBetween: 20,
-      },
-      0: {
-        slidesPerView: 1,
-        spaceBetween: 20,
-      }
-    }
-  };
-
-
 }

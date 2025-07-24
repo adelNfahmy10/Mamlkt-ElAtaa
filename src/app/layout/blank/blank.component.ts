@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NavbarComponent } from "../../components/navbar/navbar.component";
 import { HomeComponent } from "../../components/home/home.component";
 import { OurProjectsComponent } from "../../components/our-projects/our-projects.component";
 import { ProjectofferComponent } from "../../components/projectoffer/projectoffer.component";
@@ -11,7 +10,7 @@ import { OldProjectComponent } from "../../components/old-project/old-project.co
 @Component({
   selector: 'app-blank',
   standalone: true,
-  imports: [NavbarComponent, HomeComponent, OurProjectsComponent, ProjectofferComponent, ContractingComponent, WhoWeAreComponent, FooterComponent, OldProjectComponent],
+  imports: [ HomeComponent, OurProjectsComponent, ProjectofferComponent, ContractingComponent, OldProjectComponent],
   templateUrl: './blank.component.html',
   styleUrl: './blank.component.scss'
 })

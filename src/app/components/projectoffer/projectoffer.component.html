@@ -11,33 +11,34 @@
         <swiper-slide class="wow bounceInUp" data-wow-delay="0s">
           <div class="box-slide position-relative overflow-hidden rounded-3">
             <img loading="lazy" [src]="project.mainPicture" class="w-100 rounded-3" [alt]="project.title">
-            <div class="slide-info p-3 rounded-top-3 text-white d-flex flex-column gap-2">
+            <div class="slide-info p-3 rounded-top-3 text-white d-flex flex-column" [ngClass]="{'slideDown': !project.arrow, 'slideUp': project.arrow}">
               <div class="d-flex justify-content-between align-items-center">
                 <h4>{{project.title}}</h4>
-                <span>{{project.price}}ريال</span>
+                <i class="fa-solid fa-arrow-up cr fs-3" [ngClass]="{'fa-arrow-up rounded-top-5': !project.arrow, 'fa-arrow-down rounded-bottom-5': project.arrow}" (click)="toggleArrow(project)"></i>
               </div>
               <ul class="list-unstyled p-0">
-                <li class="d-flex gap-3">
-                  <span><i class="fa-solid fa-bed"></i> ({{project.roomNumbers}}) غرف</span>
-                  <span><i class="fa-solid fa-subscript"></i> {{project.space || 0}} م<sup>2</sup></span>
+                <li class="d-flex algn-items-center mt-1"><a [href]="project.location"><span><i class="fa-solid fa-location-dot"></i>  {{ project.area }} - {{project.city}} </span></a></li>
+                <li class="d-flex gap-3 my-1">
+                  <span><i class="fa-solid fa-bed"></i> ({{project.roomNumbers}}) غرفة</span>
+                  <span><i class="fa-solid fa-subscript ms-1"></i>مساحات تبدأ من {{project.space || 0}} م<sup>2</sup></span>
                 </li>
-                <li class="d-flex align-items-center"><a [href]="project.location"> <span><i class="fa-solid fa-location-dot"></i> {{ project.area }} - {{project.city}} </span> </a></li>
+                <li>
+                  <span class="d-flex align-items-center gap-1">
+                    السعر : {{project.price}}
+                    <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1124.14 1256.39" class="w-6"><path d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z"></path><path d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z"></path></svg>
+                  </span>
+                </li>
               </ul>
-              <div class="details">
-                <div class="d-flex align-items-center justify-content-between">
-                  <div class="d-flex gap-2">
-                    <a [href]="'mailto:' + allConfiguration?.email">
-                      <span><i class="fa-solid fa-envelope"></i> طلب خدمة</span>
-                    </a>
 
-                    <a [href]="'https://wa.me/' + allConfiguration?.phoneNumber">
-                      <span><i class="fa-brands fa-whatsapp"></i> اتصل واتس</span>
-                    </a>
-                  </div>
+              <p>{{ project.description.split(' ').slice(0, 20).join(' ') }}...</p>
 
-                  <div>
-                    <button class="btn btn-book" [routerLink]="['/project-details/' + project.id]"> <i class="fa-solid fa-arrow-trend-up"></i> عرض المزيد</button>
-                  </div>
+              <div class="details d-flex align-items-start justify-content-between">
+                <a class="d-flex justify-content-center align-items-center gap-2 book-link" [href]="'https://wa.me/' + allConfiguration?.phoneNumber">
+                  <i class="fa-brands fa-whatsapp"></i> <span>بادر بحجز وحدتك</span>
+                </a>
+
+                <div>
+                  <button class="btn btn-book" [routerLink]="['/project-details/' + project.id]"> <i class="fa-solid fa-arrow-trend-up"></i> عرض التفاصيل</button>
                 </div>
               </div>
             </div>
@@ -48,33 +49,34 @@
         <swiper-slide class="wow bounceInUp" data-wow-delay="0s">
           <div class="box-slide position-relative overflow-hidden rounded-3">
             <img loading="lazy" [src]="project.mainPicture" class="w-100 rounded-3" [alt]="project.title">
-            <div class="slide-info p-3 rounded-top-3 text-white d-flex flex-column gap-2">
+            <div class="slide-info p-3 rounded-top-3 text-white d-flex flex-column" [ngClass]="{'slideDown': !project.arrow, 'slideUp': project.arrow}">
               <div class="d-flex justify-content-between align-items-center">
                 <h4>{{project.title}}</h4>
-                <span>{{project.price}}ريال</span>
+                <i class="fa-solid fa-arrow-up cr fs-3" [ngClass]="{'fa-arrow-up rounded-top-5': !project.arrow, 'fa-arrow-down rounded-bottom-5': project.arrow}" (click)="toggleArrow(project)"></i>
               </div>
               <ul class="list-unstyled p-0">
-                <li class="d-flex gap-3">
-                  <span><i class="fa-solid fa-bed"></i> ({{project.roomNumbers}}) غرف</span>
-                  <span><i class="fa-solid fa-subscript"></i> 500 م<sup>2</sup></span>
+                <li class="d-flex algn-items-center mt-1"><a [href]="project.location"><span><i class="fa-solid fa-location-dot"></i>  {{ project.area }} - {{project.city}} </span></a></li>
+                <li class="d-flex gap-3 my-1">
+                  <span><i class="fa-solid fa-bed"></i> ({{project.roomNumbers}}) غرفة</span>
+                  <span><i class="fa-solid fa-subscript ms-1"></i>مساحات تبدأ من {{project.space || 0}} م<sup>2</sup></span>
                 </li>
-                <li class="d-flex align-items-center mb-1"><a [href]="project.location"> <span><i class="fa-solid fa-location-dot"></i> {{project.city}} مدينة - {{ project.area }} منطقة</span> </a></li>
+                <li>
+                  <span class="d-flex align-items-center gap-1">
+                    السعر : {{project.price}}
+                    <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1124.14 1256.39" class="w-6"><path d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z"></path><path d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z"></path></svg>
+                  </span>
+                </li>
               </ul>
-              <div class="details">
-                <div class="d-flex align-items-start justify-content-between">
-                  <div class="d-flex gap-2">
-                    <a [href]="'mailto:' + allConfiguration?.email">
-                      <span><i class="fa-solid fa-envelope"></i> طلب خدمة</span>
-                    </a>
 
-                    <a [href]="'https://wa.me/' + allConfiguration?.phoneNumber">
-                      <span><i class="fa-brands fa-whatsapp"></i> اتصل واتس</span>
-                    </a>
-                  </div>
+              <p>{{ project.description.split(' ').slice(0, 20).join(' ') }}...</p>
 
-                  <div>
-                    <button class="btn btn-book" [routerLink]="['/project-details/' + project.id]"> <i class="fa-solid fa-arrow-trend-up"></i> عرض المزيد</button>
-                  </div>
+              <div class="details d-flex align-items-start justify-content-between">
+                <a class="d-flex justify-content-center align-items-center gap-2 book-link" [href]="'https://wa.me/' + allConfiguration?.phoneNumber">
+                  <i class="fa-brands fa-whatsapp"></i> <span>بادر بحجز وحدتك</span>
+                </a>
+
+                <div>
+                  <button class="btn btn-book" [routerLink]="['/project-details/' + project.id]"> <i class="fa-solid fa-arrow-trend-up"></i> عرض التفاصيل</button>
                 </div>
               </div>
             </div>

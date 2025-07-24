@@ -7,19 +7,19 @@
     <div class="collapse navbar-collapse align-items-center" id="navbarNav">
       <ul class="navbar-nav mx-auto gap-4">
         <li class="nav-item">
-          <a class="nav-link" [ngClass]="{ active: activeSection === 'home' }" (click)="setActive('home')" href="#home">الرئيسية</a>
+          <a class="nav-link" routerLink="/blank" routerLinkActive="active">الرئيسية</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [ngClass]="{ active: activeSection === 'project' }" (click)="setActive('project')" href="#project">مشاريع التمليك</a>
+          <a class="nav-link" routerLink="/our-project" routerLinkActive="active">مشاريع التمليك</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [ngClass]="{ active: activeSection === 'project-offer' }" (click)="setActive('project-offer')" href="#project-offer">العروض العقارية</a>
+          <a class="nav-link" routerLink="/project-offer" routerLinkActive="active">العروض العقارية</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [ngClass]="{ active: activeSection === 'contracting' }" (click)="setActive('contracting')" href="#contracting">مقاولات</a>
+          <a class="nav-link" routerLink="/contracting" routerLinkActive="active">أعمالنا السابقة والمقاولات</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [ngClass]="{ active: activeSection === 'whoWeAre' }" (click)="setActive('#whoWeAre')" href="#whoWeAre">من نحن</a>
+          <a class="nav-link cr">من نحن</a>
         </li>
       </ul>
       <div class="d-flex justify-content-end align-items-center mt-1">

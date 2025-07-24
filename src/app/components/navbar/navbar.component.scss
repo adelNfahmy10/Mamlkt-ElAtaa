@@ -40,11 +40,11 @@ nav{
         left: 0;
         width: 0;
         height: 2px;
-        background-color: #0EAD93;
+        background-color: #00495f;
         transition: all .3s;
       }
       &.active,&:hover{
-        color: #0EAD93;
+        color: #00495f;
       }
       &.active::before,&:hover::before{
         width: 70%;
