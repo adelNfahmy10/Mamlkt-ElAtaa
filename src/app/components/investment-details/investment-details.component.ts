@@ -1,13 +1,11 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, inject, OnInit } from '@angular/core';
-import { FooterComponent } from "../footer/footer.component";
-import { NavbarComponent } from "../navbar/navbar.component";
 import { SumouService } from '../../core/servcies/sumou/sumou.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-investment-details',
   standalone: true,
-  imports: [FooterComponent, NavbarComponent],
+  imports: [],
   templateUrl: './investment-details.component.html',
   styleUrl: './investment-details.component.scss',
   schemas:[CUSTOM_ELEMENTS_SCHEMA]

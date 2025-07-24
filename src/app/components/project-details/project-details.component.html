@@ -1,5 +1,3 @@
-<app-navbar></app-navbar>
-
 <section class="prodcut-details">
   <div class="main-image">
     <img loading="lazy" [src]="projectData.projectDetails[0].picture" class="w-100 object-fit-cover" [alt]="projectData.title">
@@ -38,7 +36,10 @@
 
               <div class="row g-3 text-secondary mb-4">
                 <div class="col-md-2">
-                  <strong>السعر:</strong> {{ projectData.price }} ريال
+                  <strong>المدينة:</strong> {{ projectData.city }}
+                </div>
+                <div class="col-md-3">
+                  <strong>المنطقة:</strong> {{ projectData.area }}
                 </div>
                 <div class="col-md-2">
                   <strong>المساحة:</strong> {{ projectData.space }} م<sup>2</sup>
@@ -46,30 +47,20 @@
                 <div class="col-md-2">
                   <strong>عدد الغرف:</strong> {{ projectData.roomNumbers }} غرفة
                 </div>
-                <div class="col-md-2">
-                  <strong>المدينة:</strong> {{ projectData.city }}
-                </div>
-                <div class="col-md-3">
-                  <strong>المنطقة:</strong> {{ projectData.area }}
-                </div>
                 <div class="col-12">
                   <strong>الموقع: </strong> <a [href]="projectData.location" class="location"> إتجة للموقع <i class="fa-solid fa-arrow-trend-up"></i></a>
+                </div>
+                <div class="col-md-2">
+                  <strong>السعر:</strong> {{ projectData.price }} <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1124.14 1256.39" class="w-6"><path d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z"></path><path d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z"></path></svg>
                 </div>
               </div>
 
               <div [innerHTML]="projectData.description"></div>
 
               <div class="row g-2 mt-3">
-                <div class="col-md-6">
-                  <button class="btn btn-book w-100 text-white fw-medium d-flex justify-content-center align-items-center gap-2" [routerLink]="['/book/' + projectData.id]" >
-                    <span>احجز الآن</span>
-                    <i class="fa-solid fa-address-book text-white fs-5"></i>
-                  </button>
-                </div>
-
-                <div class="col-md-6">
-                   <a href="https://wa.me/050007031" class="btn btn-book w-100 text-white fw-medium d-flex justify-content-center align-items-center gap-2">
-                    <span>احجز عبر واتساب</span>
+                <div class="col-12">
+                  <a href="https://wa.me/050007031" class="btn btn-book w-100 text-white fw-medium d-flex justify-content-center align-items-center gap-2">
+                    <span>بادر بحجز وحدتك</span>
                     <i class="fa-brands fa-whatsapp text-white fs-4"></i>
                   </a>
                 </div>
@@ -81,5 +72,3 @@
     </div>
   </div>
 </section>
-
-<app-footer></app-footer>
