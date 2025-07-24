@@ -19,7 +19,7 @@
               <ul class="list-unstyled p-0">
                 <li class="d-flex gap-3">
                   <span><i class="fa-solid fa-bed"></i> ({{project.roomNumbers}}) غرف</span>
-                  <span><i class="fa-solid fa-subscript"></i> 500 م<sup>2</sup></span>
+                  <span><i class="fa-solid fa-subscript"></i> {{project.space || 0}} م<sup>2</sup></span>
                 </li>
                 <li class="d-flex align-items-center"><a [href]="project.location"> <span><i class="fa-solid fa-location-dot"></i> {{ project.area }} - {{project.city}} </span> </a></li>
               </ul>
