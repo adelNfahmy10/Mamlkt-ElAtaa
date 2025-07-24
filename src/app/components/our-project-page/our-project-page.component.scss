@@ -23,7 +23,7 @@
   }
   .box-slide{
     transition: all .3s;
-    height: 580px;
+    height: 600px;
     .fa-arrow-up, .fa-arrow-down{
       background-color: white;
       color: #00495f;
@@ -43,7 +43,7 @@
       background-color: #00495fce;
       transition: all .3s ease-in-out;
       &.slideDown {
-        bottom: -39%;
+        bottom: -40%;
       }
       &.slideUp {
         bottom: 0;
@@ -56,7 +56,7 @@
       }
       .details{
         .book-link{
-          font-size: 20px;
+          font-size: 14px;
         }
         .btn-book{
           background-color: #00495fae;

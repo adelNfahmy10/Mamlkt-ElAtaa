@@ -5,7 +5,7 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 @Component({
   selector: 'app-project-details',
   standalone: true,
-  imports: [RouterLink],
+  imports: [],
   templateUrl: './project-details.component.html',
   styleUrl: './project-details.component.scss',
   schemas:[CUSTOM_ELEMENTS_SCHEMA]

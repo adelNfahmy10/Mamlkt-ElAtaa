@@ -6,7 +6,7 @@
         <div class="col-md-4">
           <div class="box-slide position-relative overflow-hidden rounded-3">
               <img loading="lazy" [src]="project.mainPicture" class="w-100 rounded-3" [alt]="project.title">
-              <div class="slide-info p-3 rounded-top-3 text-white d-flex flex-column gap-2" [ngClass]="{'slideDown': !project.arrow, 'slideUp': project.arrow}">
+              <div class="slide-info p-3 rounded-top-3 text-white d-flex flex-column" [ngClass]="{'slideDown': !project.arrow, 'slideUp': project.arrow}">
                 <div class="d-flex justify-content-between align-items-center">
                   <h4>{{project.title}}</h4>
                   <i class="fa-solid fa-arrow-up cr fs-3" [ngClass]="{'fa-arrow-up rounded-top-5': !project.arrow, 'fa-arrow-down rounded-bottom-5': project.arrow}" (click)="toggleArrow(project)"></i>
@@ -25,7 +25,7 @@
                   </li>
                 </ul>
                 <p>{{ project.description.split(' ').slice(0, 20).join(' ') }}...</p>
-                <div class="details d-flex align-items-start justify-content-between">
+                <div class="details d-flex align-items-center justify-content-between">
                   <a class="d-flex justify-content-center align-items-center gap-2 book-link" [href]="'https://wa.me/' + allConfiguration?.phoneNumber">
                     <i class="fa-brands fa-whatsapp"></i> <span>بادر بحجز وحدتك</span>
                   </a>

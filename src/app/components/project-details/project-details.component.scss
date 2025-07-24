@@ -76,12 +76,13 @@ swiper-slide img {
     justify-content: center;
     align-items: flex-start;
     padding: 20px;
-    background: #2486766f;
+    background: #0d45568c;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
 
     h2 {
       font-size: 25px;
-      background-color: #0EAD93;
+      background-color: #00495f9a;
+      color: #fff;
       padding: 10px 20px;
       border-top-left-radius: 40px;
       border-bottom-right-radius: 40px;
@@ -93,7 +94,7 @@ swiper-slide img {
     color: #00495f;
   }
   .btn-book{
-    background-color: #00495fa9;
+    background-color: #00495fd9;
     &:hover{
       background-color: #00495f;
     }

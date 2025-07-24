@@ -6,7 +6,7 @@
       <swiper-slide>
         <div class="position-relative">
             <img loading="lazy" [src]="header.picture" [alt]="header.title" />
-            <p class="info-silde mb-0">{{header.title}}</p>
+            <p class="info-silde mb-0 cr" [routerLink]="['/project-details/' + header.id]">{{header.title}}</p>
         </div>
       </swiper-slide>
     }
