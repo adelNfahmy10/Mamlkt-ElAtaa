@@ -45,10 +45,10 @@
                   <strong>المساحة:</strong> {{ projectData.space }} م<sup>2</sup>
                 </div>
                 <div class="col-sm-2">
-                  <strong>عدد الغرف:</strong> {{ projectData.roomNumbers }} غرفة
+                  <strong>عدد الوحدات:</strong> {{ projectData.roomNumbers }} وحدات
                 </div>
                 <div class="col-sm-2">
-                  <strong>السعر:</strong> {{ projectData.price }} <svg fill="#00495f" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1124.14 1256.39" class="w-6"><path d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z"></path><path d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z"></path></svg>
+                  <strong>السعر:</strong> {{ projectData.price }} ألف <svg fill="#00495f" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1124.14 1256.39" class="w-6"><path d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z"></path><path d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z"></path></svg>
                 </div>
                 <div class="col-sm-2">
                   <strong>الموقع: </strong> <a [href]="projectData.location" target="_blank" class="location"> إتجة للموقع <i class="fa-solid fa-arrow-trend-up"></i></a>
@@ -72,7 +72,7 @@
 
         @for (model of projectData.models; track $index) {
           <div class="col-md-4">
-            <div class="card p-3">
+            <div class="card p-3 pb-0">
               <h4>{{model.title}}</h4>
               <div class="card-body px-0">
                 <div class="row g-2">
@@ -91,18 +91,17 @@
                   <div class="col-md-4 col-12">
                     <span><i class="fa-solid fa-shower"></i> {{model.pathRoomNumber}} حمام</span>
                   </div>
-                   <div class="col-md-4 col-12">
-                    <span><i class="fa-solid fa-square-parking"></i> {{model.parking}}</span>>
-                  </div>
                   <div class="col-md-4 col-12">
-                    <span><i class="fa-solid fa-subscript ms-1"></i> {{model.space}} م<sub>2</sub></span>
+                    <span><i class="fa-solid fa-square-parking"></i> {{model.parking}}</span>
+                  </div>
+                  <div class="col-12">
+                    <a href="https://wa.me/050007031" class="btn btn-book w-100 text-white fw-medium d-flex justify-content-center align-items-center gap-2">
+                      <span>بادر بحجز النموذج</span>
+                      <i class="fa-brands fa-whatsapp text-white fs-4"></i>
+                    </a>
                   </div>
                 </div>
               </div>
-
-              <!-- <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-book w-100 text-white fw-medium d-flex justify-content-center align-items-center gap-2">
-                <span>تفاصيل النموذج</span>
-              </button> -->
             </div>
           </div>
         }
