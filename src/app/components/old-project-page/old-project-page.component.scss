@@ -33,6 +33,12 @@
       object-fit: cover;
       transition: all .3s;
     }
+    .project-title{
+      background-color: #00495fbd;
+      border-top-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+      font-size: 20px;
+    }
 
     .details{
       position: absolute;
