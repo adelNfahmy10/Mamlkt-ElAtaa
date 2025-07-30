@@ -102,7 +102,8 @@
                     <span><i class="fa-solid fa-square-parking"></i> {{model.parking}}</span>
                   </div>
                   <div class="col-12">
-                    <a href="https://wa.me/+966503515922" class="btn btn-book w-100 text-white fw-medium d-flex justify-content-center align-items-center gap-2">
+                    <a [href]="'https://wa.me/+966503515922?text=أرغب%20في%20حجز%20' + model.title"
+                      class="btn btn-book w-100 text-white fw-medium d-flex justify-content-center align-items-center gap-2">
                       <span>بادر بحجز النموذج</span>
                       <i class="fa-brands fa-whatsapp text-white fs-4"></i>
                     </a>
