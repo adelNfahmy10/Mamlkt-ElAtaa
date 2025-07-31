@@ -13,25 +13,25 @@ export class ContractingPageComponent {
   private readonly _SumouService = inject(SumouService)
 
   allContracting:any[] = []
-  allConfiguration:any
+  allContact:any
 
   ngOnInit():void {
     this.getAllContracting()
-    this.getAllConfigurations()
+    this.getAllContacts()
   }
 
   getAllContracting():void{
     this._SumouService.GetAllContracting().subscribe({
       next:(res)=>{
-        this.allContracting = res.data
+        this.allContracting = res.data.filter((con:any) => con.typeId == 1)
       }
     })
   }
 
-  getAllConfigurations():void{
-    this._SumouService.GetAllConfigurations().subscribe({
+  getAllContacts():void{
+    this._SumouService.GetAllContacts().subscribe({
       next:(res)=>{
-        this.allConfiguration = res.data[0]
+        this.allContact = res.data[0]
       }
     })
   }

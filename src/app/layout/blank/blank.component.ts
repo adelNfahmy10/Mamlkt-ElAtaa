@@ -6,11 +6,12 @@ import { ContractingComponent } from "../../components/contracting/contracting.c
 import { WhoWeAreComponent } from "../../components/who-we-are/who-we-are.component";
 import { FooterComponent } from "../../components/footer/footer.component";
 import { OldProjectComponent } from "../../components/old-project/old-project.component";
+import { PrivateContractorComponent } from "../../components/private-contractor/private-contractor.component";
 
 @Component({
   selector: 'app-blank',
   standalone: true,
-  imports: [ HomeComponent, OurProjectsComponent, ProjectofferComponent, ContractingComponent, OldProjectComponent],
+  imports: [HomeComponent, OurProjectsComponent, ProjectofferComponent, ContractingComponent, OldProjectComponent, PrivateContractorComponent],
   templateUrl: './blank.component.html',
   styleUrl: './blank.component.scss'
 })

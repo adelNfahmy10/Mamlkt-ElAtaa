@@ -1,18 +1,18 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { SumouService } from '../../core/servcies/sumou/sumou.service';
 
 @Component({
-  selector: 'app-contracting',
+  selector: 'app-private-contractor',
   standalone: true,
   imports: [],
-  templateUrl: './contracting.component.html',
-  styleUrl: './contracting.component.scss'
+  templateUrl: './private-contractor.component.html',
+  styleUrl: './private-contractor.component.scss'
 })
-export class ContractingComponent implements OnInit{
-  private readonly _SumouService = inject(SumouService)
+export class PrivateContractorComponent {
+ private readonly _SumouService = inject(SumouService)
 
   allContracting:any[] = []
-  allContact:any
+  allContacts:any
 
   ngOnInit():void {
     this.getAllContracting()
@@ -22,7 +22,7 @@ export class ContractingComponent implements OnInit{
   getAllContracting():void{
     this._SumouService.GetAllContracting().subscribe({
       next:(res)=>{
-        this.allContracting = res.data.filter((con:any) => con.typeId == 1)
+        this.allContracting = res.data.filter((con:any) => con.typeId == 2)
       }
     })
   }
@@ -30,9 +30,10 @@ export class ContractingComponent implements OnInit{
   getAllContacts():void{
     this._SumouService.GetAllContacts().subscribe({
       next:(res)=>{
-        this.allContact = res.data[0]
+        this.allContacts = res.data[0]
+        console.log(this.allContacts);
+
       }
     })
   }
-
 }
