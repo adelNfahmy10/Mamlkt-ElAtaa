@@ -16,19 +16,21 @@
           <a class="nav-link" routerLink="/project-offer" routerLinkActive="active">العروض العقارية</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/contracting" routerLinkActive="active">أعمالنا السابقة والمقاولات</a>
+          <a class="nav-link" routerLink="/contracting" routerLinkActive="active">المقاولات</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/old-project" routerLinkActive="active">أعمالنا السابقة</a>
         </li>
         <li class="nav-item">
           <a class="nav-link cr">من نحن</a>
         </li>
       </ul>
       <div class="d-flex justify-content-end align-items-center mt-1">
-        <a href="https://wa.me/+966503515922">
-          503515922
-          <!-- <img loading="lazy" src="assets/image/navbar/mobile.png" class="mobile-image" alt="sumou-mobile"> -->
+        <a [href]="'tel:' + phoneNumber" class="phoneNumber">
           <svg width="29" height="30" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14.0005 0.630393L14.8957 0.613281C26.155 0.986476 32.8894 13.6009 26.5635 23.1516C20.8733 31.7433 8.23529 31.7677 2.48559 23.2242C-3.88019 13.7655 2.70858 1.06226 14.0005 0.630393ZM8.21088 4.59294C7.83896 4.64346 7.45158 4.83413 7.16104 5.06636C6.61008 5.50555 4.76024 7.36664 4.47784 7.92969C2.92831 11.0163 5.08659 15.6723 6.89736 18.2585C9.1419 21.4641 12.8196 24.2574 16.6202 25.2971C18.2364 25.7396 20.6397 25.9905 22.0753 24.9378C22.5416 24.5963 24.5566 22.5601 24.7878 22.1029C25.189 21.3101 25.0995 20.5678 24.6405 19.8279C23.6028 18.8917 22.601 17.7908 21.5357 16.8978C20.9514 16.4081 20.4387 16.2003 19.6558 16.2923C18.4773 16.4309 17.6171 18.0068 16.7252 18.6643C16.1856 19.062 15.3441 18.7165 14.785 18.4728C13.1964 17.7811 11.4686 15.9917 10.9519 14.3204C10.8029 13.8389 10.6475 13.3394 10.9698 12.901C11.97 11.537 14.2804 10.6301 13.0304 8.45852C11.9936 7.50516 10.9299 5.82904 9.84179 5.00199C9.38361 4.65324 8.78056 4.5139 8.21251 4.59049L8.21088 4.59294Z" fill="#006F62"/>
           </svg>
+          {{phoneNumber}}
         </a>
       </div>
     </div>

@@ -1,11 +1,13 @@
 import { Component, inject } from '@angular/core';
 import { SumouService } from '../../core/servcies/sumou/sumou.service';
 import { OldProjectPageComponent } from "../old-project-page/old-project-page.component";
+import { ContractingComponent } from "../contracting/contracting.component";
+import { PrivateContractorComponent } from "../private-contractor/private-contractor.component";
 
 @Component({
   selector: 'app-contracting-page',
   standalone: true,
-  imports: [OldProjectPageComponent],
+  imports: [ContractingComponent, PrivateContractorComponent],
   templateUrl: './contracting-page.component.html',
   styleUrl: './contracting-page.component.scss'
 })

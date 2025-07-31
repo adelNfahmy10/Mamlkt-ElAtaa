@@ -15,28 +15,32 @@
            <div class="col-md-5">
             <div class="contact">
               <h4 class="wow fadeInDown">تواصل معنا</h4>
-              <ul class="list-unstyled p-0 d-flex flex-column gap-3 mt-3 contact-list overflow-hidden">
+              <ul class="list-unstyled p-0 d-flex flex-column gap-2 mt-3 contact-list overflow-hidden">
                 <li>
-                  <div class="d-flex align-items-center gap-1 wow fadeInRight">
-                    <img loading="lazy" src="assets/image/navbar/mobile.png" class="mobile-image" alt="سمو المملكة">
-                    <div class="d-flex align-items-center flex-column">
-                      <a class="phone" [href]="'https://wa.me/' + allContacts?.phone1">{{allContacts?.phone1}}</a>
-                      <a class="phone" [href]="'https://wa.me/' + allContacts?.phone2">{{allContacts?.phone2}}</a>
-                    </div>
+                  <div class="d-flex align-items-center gap-2">
+                    <i class="fa-brands fa-whatsapp fs-4"></i>
+                    <a class="phone" [href]="'https://wa.me/' + allContacts?.whatsApp">{{allContacts?.whatsApp}}</a>
+                  </div>
+                </li>
+                <li>
+                  <div class="d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-phone gs-4"></i>
+                    <a class="phone" [href]="'tel:' + allContacts?.phoneNumber">{{allContacts?.phoneNumber}}</a>
                   </div>
                 </li>
                 <li>
                   <div class="d-flex align-items-center gap-1 wow fadeInRight">
                     <i class="fa-solid fa-location-dot fs-4 mt-1"></i>
-                    <a>{{allContacts?.address}}</a>
+                    <a [href]="allContacts?.address" target="_blank">{{allContacts?.address}}</a>
                   </div>
                 </li>
                 <li>
                   <div class="d-flex align-items-center gap-2 icons">
                     <a class="rounded-circle p-4 d-flex justify-content-center align-items-center wow bounceInUp" data-wow-delay="0s" [href]="allContacts?.instagramUrl" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                    <a class="rounded-circle p-4 d-flex justify-content-center align-items-center wow bounceInUp" data-wow-delay="0.2s" [href]="allContacts?.twitterUrl" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a class="rounded-circle p-4 d-flex justify-content-center align-items-center wow bounceInUp" data-wow-delay="0.2s" [href]="allContacts?.twitterUrl" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
                     <a class="rounded-circle p-4 d-flex justify-content-center align-items-center wow bounceInUp" data-wow-delay="0.4s" [href]="allContacts?.facebookUrl" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a class="rounded-circle p-4 d-flex justify-content-center align-items-center wow bounceInUp" data-wow-delay="0.6s" [href]="allContacts?.linkedInUrl" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a class="rounded-circle p-4 d-flex justify-content-center align-items-center wow bounceInUp" data-wow-delay="0.6s" [href]="allContacts?.snapchatUrl" target="_blank"><i class="fa-brands fa-snapchat"></i></a>
+                    <a class="rounded-circle p-4 d-flex justify-content-center align-items-center wow bounceInUp" data-wow-delay="0.8s" [href]="allContacts?.tiktokUrl" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
                   </div>
                 </li>
               </ul>
@@ -45,7 +49,7 @@
         </div>
       </div>
       <div class="col-md-5 left px-0 wow bounceInUp">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d927758.0377266759!2d46.16296366602666!3d24.72499765722435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03890d489399%3A0xba974d1c98e79fd5!2sRiyadh%20Saudi%20Arabia!5e0!3m2!1sen!2seg!4v1748944057474!5m2!1sen!2seg" class="w-100 h-100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe class="w-100 h-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d475325.03137566603!2d38.881491443934955!3d21.44980016391344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3d01fb1137e59%3A0xe059579737b118db!2sJeddah%20Saudi%20Arabia!5e0!3m2!1sen!2seg!4v1753956826634!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </div>
