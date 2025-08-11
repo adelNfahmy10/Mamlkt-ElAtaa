@@ -10,8 +10,7 @@ import { WhoWeArePageComponent } from './components/who-we-are-page/who-we-are-p
 import { ContractingPageComponent } from './components/contracting-page/contracting-page.component';
 
 export const routes: Routes = [
-  {path:'', redirectTo:'blank', pathMatch:'full'},
-  {path:'blank', component:BlankComponent, title:'Mamlkt Al Ataa'},
+  {path:'', component:BlankComponent, title:'Mamlkt Al Ataa'},
   {path:'our-project', component:OurProjectPageComponent, title:'Our Project'},
   {path:'contracting', component:ContractingPageComponent, title:'Contracting'},
   {path:'old-project', component:OldProjectPageComponent, title:'Old Project'},
