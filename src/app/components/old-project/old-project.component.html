@@ -1,6 +1,9 @@
 <section id="project-offer" class="projects py-3">
   <div class="container">
-    <h2 class="text-center wow fadeInDown">أعمالنا السابقة</h2>
+    <div class="text-center">
+      <h2 class="wow fadeInDown">أعمالنا السابقة</h2>
+      <p class="wow fadeInDown">تعرّف على نماذج من أعمالنا السابقة التي تعكس خبرتنا وجودتنا.</p>
+    </div>
     <swiper-container dir="ltr" class="mySwiper py-3"
       [breakpoints]="swiperConfig.breakpoints"
       space-between="20"
@@ -13,7 +16,7 @@
             <h4 class="project-title text-white px-4 py-2 position-absolute bottom-0 end-0 z-2">{{project.title}}</h4>
             <img loading="lazy" [src]="project.images[0].image" class="w-100 rounded-3" alt="sumou">
             <div class="slide-info p-3 rounded-top-3 text-white d-flex flex-column gap-2">
-              <button class="btn details rounded-circle" [routerLink]="['/previour-investment/' + project.id]"> <i class="fa-solid fa-arrow-trend-up"></i> المزيد</button>
+              <button class="btn details rounded-pill" [routerLink]="['/previour-investment/' + project.id]"> <i class="fa-solid fa-arrow-trend-up"></i> المزيد من التفاصيل</button>
             </div>
           </div>
         </swiper-slide>

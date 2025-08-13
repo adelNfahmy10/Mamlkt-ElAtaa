@@ -1,12 +1,19 @@
 <section id="home" class="home position-relative">
-  <h1 #heading class="z-2 animate__animated animate__backInDown animate__delay-1s rounded-start-5">مشــــاريع التـمــليك</h1>
   <swiper-container #mainSwiper autoplay-delay="2500" class="mySwiper animate__animated animate__backInDown"
     thumbs-swiper=".mySwiper2" >
     @for (header of allHeadersImage; track $index) {
       <swiper-slide>
-        <div class="position-relative">
-            <img loading="lazy" [src]="header.picture" [alt]="header.title" />
-            <p class="info-silde mb-0 cr" [routerLink]="['/project-details/' + header.id]">{{header.title}}</p>
+        <div class="position-relative h-100">
+          <div class="header-image">
+            <!-- <img loading="lazy" [src]="header.picture" [alt]="header.title" /> -->
+            <img loading="lazy" src="assets/image/we3.jpg" [alt]="header.title" />
+          </div>
+          <div class="header-title">
+            <div class="titles">
+              <h2 class="text-white">استثمار مضمون وبيت العمر في مشروع واحد</h2>
+              <h5 class="text-white" [routerLink]="['/project-details/' + header.id]">{{header.title}}</h5>
+            </div>
+          </div>
         </div>
       </swiper-slide>
     }

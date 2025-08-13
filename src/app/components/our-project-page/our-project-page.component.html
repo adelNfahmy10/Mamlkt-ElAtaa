@@ -4,7 +4,7 @@
     <div class="row g-3 justify-content-center">
       @for (project of allProject; track $index) {
         <div class="col-md-4">
-          <div class="box-slide position-relative overflow-hidden rounded-3">
+          <div class="box-slide position-relative overflow-hidden rounded-3 cr" (click)="toggleArrow(project)">
               <img loading="lazy" [src]="project.mainPicture" class="w-100 rounded-3" [alt]="project.title">
               <div class="slide-info p-3 rounded-top-3 text-white d-flex flex-column" [ngClass]="{'slideDown': !project.arrow, 'slideUp': project.arrow}">
                 <div class="d-flex justify-content-between align-items-center">
