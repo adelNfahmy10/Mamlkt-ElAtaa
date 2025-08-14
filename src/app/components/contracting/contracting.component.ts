@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, inject, OnInit } from '@angular/core';
 import { SumouService } from '../../core/servcies/sumou/sumou.service';
 
 @Component({
@@ -6,7 +6,8 @@ import { SumouService } from '../../core/servcies/sumou/sumou.service';
   standalone: true,
   imports: [],
   templateUrl: './contracting.component.html',
-  styleUrl: './contracting.component.scss'
+  styleUrl: './contracting.component.scss',
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class ContractingComponent implements OnInit{
   private readonly _SumouService = inject(SumouService)

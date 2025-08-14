@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, inject } from '@angular/core';
 import { SumouService } from '../../core/servcies/sumou/sumou.service';
 
 @Component({
@@ -6,7 +6,8 @@ import { SumouService } from '../../core/servcies/sumou/sumou.service';
   standalone: true,
   imports: [],
   templateUrl: './private-contractor.component.html',
-  styleUrl: './private-contractor.component.scss'
+  styleUrl: './private-contractor.component.scss',
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class PrivateContractorComponent {
  private readonly _SumouService = inject(SumouService)

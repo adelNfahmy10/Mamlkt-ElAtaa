@@ -2,13 +2,26 @@
   <div class="container">
     <div class="row g-4 align-items-center">
        <div class="col-xl-4">
-        <div class="contractiong-image d-flex justify-content-center align-items-center wow fadeIn">
+        <div class="contractiong-image h-100 d-flex justify-content-center align-items-center wow fadeIn">
+          <swiper-container class="mySwiper" loop="true" autoplay-delay="2500" autoplay-disable-on-interaction="false" autoplay-pause-on-mouse-enter="true">
+            <swiper-slide>
+              <img src="../../../assets/image/contracting/Screenshot_2025-08-14_105311-removebg-preview.png" alt="">
+            </swiper-slide>
+            <swiper-slide>
+              <img src="../../../assets/image/contracting/medium-shot-architect-holding-schematics-removebg-preview.png" alt="">
+            </swiper-slide>
+            <swiper-slide>
+              <img src="../../../assets/image/contracting/worker-with-hard-hat-level-checking-roof-timber-removebg-preview.png" alt="">
+            </swiper-slide>
+            <swiper-slide>
+              <img src="../../../assets/image/contracting/Screenshot_2025-08-14_105311-removebg-preview.png" alt="">
+            </swiper-slide>
+          </swiper-container>
+        </div>
+        <!-- <div class="contractiong-image d-flex justify-content-center align-items-center wow fadeIn">
           @for (contracting of allContracting; track $index) {
             <img loading="lazy" class="wow fadeInLeft" [src]="contracting.fileUrl" alt="contracting">
           }
-        </div>
-        <!-- <div class="contractiong-image h-100 d-flex justify-content-center align-items-center wow fadeIn">
-          <img loading="lazy" class="wow fadeInLeft" src="assets/image/contracting/excavator.png" alt="contracting">
         </div> -->
       </div>
       <div class="col-xl-8 wow fadeIn">
@@ -19,11 +32,6 @@
             <p class="wow fadeInUp">{{contracing?.description}}</p>
           }
           <ul class="list-unstyled p-0 d-flex align-items-center gap-3">
-            <!-- <li>
-              <a [href]="'mailto:' + allConfiguration?.email">
-                <i class="fa-solid fa-envelope"></i> طلب خدمة
-              </a>
-            </li> -->
             <li>
               <a [href]="'https://wa.me/' + allContacts?.whatsApp">
                 <i class="fa-brands fa-whatsapp"></i> أطلب الخدمة
@@ -31,8 +39,6 @@
             </li>
           </ul>
         </div>
-
-
       </div>
 
     </div>

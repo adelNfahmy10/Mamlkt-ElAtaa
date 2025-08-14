@@ -13,10 +13,8 @@ import { RouterLink } from '@angular/router';
 })
 export class HomeComponent implements AfterViewInit, OnInit{
   private readonly _SumouService = inject(SumouService)
-  private readonly _Renderer2 = inject(Renderer2)
 
   @ViewChild('mainSwiper') mainSwiper!: ElementRef<HTMLElement>
-
   allHeadersImage:any[] = []
 
   ngAfterViewInit(): void {
