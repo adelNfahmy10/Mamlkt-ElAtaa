@@ -28,6 +28,7 @@ export class OurProjectsComponent implements OnInit{
     this._SumouService.GetAllOwnershipProjects().subscribe({
       next:(res)=>{
         this.allProject = res.data
+        console.log(this.allProject);
       }
     })
   }
