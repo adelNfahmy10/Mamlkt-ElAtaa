@@ -32,7 +32,6 @@ export class PrivateContractorComponent {
     this._SumouService.GetAllContacts().subscribe({
       next:(res)=>{
         this.allContacts = res.data[0]
-        console.log(this.allContacts);
 
       }
     })

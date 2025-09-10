@@ -27,7 +27,6 @@ export class NavbarComponent implements OnInit{
     this._SumouService.GetAllContacts().subscribe({
       next:(res)=>{
         this.phoneNumber = res.data[0].phoneNumber
-        console.log(this.phoneNumber);
 
       }
     })

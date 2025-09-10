@@ -44,7 +44,6 @@ export class OldProjectComponent {
     this._SumouService.GetAllPreviousInvestments().subscribe({
       next:(res)=>{
         this.allProject = res.data
-        console.log(this.allProject);
 
       }
     })

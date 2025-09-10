@@ -42,6 +42,9 @@ export class ProjectDetailsComponent {
         this._SumouService.GetProjectById(projectId).subscribe({
           next:(res)=>{
             this.projectData = res.data
+            if(!this.projectData.mainPicture){
+              this.projectData.mainPicture = this.projectData.projectDetails[0].picture
+            }
           }
         })
       }

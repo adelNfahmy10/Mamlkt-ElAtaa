@@ -29,7 +29,6 @@ export class InvestmentDetailsComponent implements OnInit{
         this._SumouService.GetPreviousInvestmentById(this.investmentId).subscribe({
           next:(res)=>{
             this.investmentData = res.data
-            console.log(this.investmentData);
           }
         })
       }
