@@ -82,10 +82,14 @@
               <div class="col-12">
                 <strong>الدور:</strong> {{ projectData.floor }} <img src="assets/image/projects/floor-icon.png" class="image-icon" [alt]="projectData.title">
               </div>
+
+              <div class="col-12">
+                <a class="card-title fs-6" [href]="projectData.modelFile" download target="_blank"> <i class="fa-solid fa-upload"></i> تحميل ملف النموذج </a>
+              </div>
             }
             @if(!projectData.pathRoomNumber){
               <div class="col-12">
-                <a class="card-title fs-6" [href]="projectData.projectFile" download> <i class="fa-solid fa-upload"></i> تحميل ملف المشروع </a>
+                <a class="card-title fs-6" [href]="projectData.projectFile" download target="_blank"> <i class="fa-solid fa-upload"></i> تحميل ملف المشروع </a>
               </div>
             }
           </div>

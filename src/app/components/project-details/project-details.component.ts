@@ -42,6 +42,8 @@ export class ProjectDetailsComponent {
         this._SumouService.GetProjectById(projectId).subscribe({
           next:(res)=>{
             this.projectData = res.data
+            console.log(this.projectData);
+
             if(!this.projectData.mainPicture){
               this.projectData.mainPicture = this.projectData.projectDetails[0].picture
             }
