@@ -16,11 +16,13 @@ export class ProjectofferComponent {
   private readonly _SumouService = inject(SumouService)
 
   allProject:any[] = []
+  allModels:any[] = []
   allConfiguration:any
   arrow:boolean = false
 
   ngOnInit():void {
     this.getAllProjects()
+    this.getAllModels()
     this.getAllConfigurations()
   }
 
@@ -28,6 +30,16 @@ export class ProjectofferComponent {
     this._SumouService.GetAllRealEstateOffers().subscribe({
       next:(res)=>{
         this.allProject = res.data
+      }
+    })
+  }
+
+  getAllModels():void{
+    this._SumouService.GetAllModels().subscribe({
+      next:(res)=>{
+        this.allModels = res.data
+        console.log(this.allModels);
+
       }
     })
   }

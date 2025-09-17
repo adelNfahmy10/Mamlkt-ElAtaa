@@ -16,7 +16,7 @@ export const routes: Routes = [
   {path:'old-project', component:OldProjectPageComponent, title:'Old Project'},
   {path:'project-offer', component:ProjectofferPageComponent, title:'Projects Offers'},
   {path:'about-us', component:WhoWeArePageComponent, title:'About Us'},
-  {path:'project-details/:id', component:ProjectDetailsComponent, title:'Project details'},
+  {path:'project-details/:type/:id', component:ProjectDetailsComponent, title:'Project details'},
   {path:'previour-investment/:id', component:InvestmentDetailsComponent, title:'Investment details'},
   {path:'book/:id', component:BookComponent, title:'Book Now'}
 ];

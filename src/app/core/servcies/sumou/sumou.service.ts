@@ -76,4 +76,15 @@ export class SumouService {
   GetProjectById(id:any):Observable<any>{
     return this._HttpClient.get(`${this.baseUrl}api/Projects/GetProjectById/${id}`)
   }
+
+  /* Models ############################################################# */
+  GetAllModels():Observable<any>{
+    return this._HttpClient.get(`${this.baseUrl}api/Model/GetAllModels`)
+  }
+
+  GetModelById(id:any):Observable<any>{
+    return this._HttpClient.get(`${this.baseUrl}api/Model/GetModelById/${id}`)
+  }
+
+
 }

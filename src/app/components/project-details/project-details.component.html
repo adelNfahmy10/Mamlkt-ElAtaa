@@ -1,6 +1,6 @@
 <section class="prodcut-details">
   <div class="main-image overflow-hidden position-relative">
-    <img loading="lazy" [src]="projectData.mainPicture" class="w-100" [alt]="projectData.title">
+    <img loading="lazy" [src]="projectData.mainPicture || projectData.headerImage" class="w-100" [alt]="projectData.title">
     <div class="overlay-content">
       <h2>{{projectData.title}}</h2>
     </div>
@@ -12,18 +12,18 @@
         <div class="col-md-8 swiper-container">
           <swiper-container style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="mySwiper"
             thumbs-swiper=".mySwiper2" autoplay-delay="2500" space-between="10" navigation="false">
-            @for (image of projectData.projectDetails; track $index) {
+            @for (image of projectData.projectDetails || projectData.images; track $index) {
               <swiper-slide>
-                <img loading="lazy" class="main-image" [src]="image.picture" [alt]="image.title" />
+                <img loading="lazy" class="main-image" [src]="image.picture || image" [alt]="image.title" />
               </swiper-slide>
             }
           </swiper-container>
 
           <swiper-container class="mySwiper2" space-between="10" slides-per-view="4" free-mode="true"
             watch-slides-progress="true">
-            @for (image of projectData.projectDetails; track $index) {
+            @for (image of projectData.projectDetails || projectData.images; track $index) {
               <swiper-slide>
-                <img loading="lazy" class="image-slider" [src]="image.picture" [alt]="image.title" />
+                <img loading="lazy" class="image-slider" [src]="image.picture || image" [alt]="image.title" />
               </swiper-slide>
             }
           </swiper-container>

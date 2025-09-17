@@ -39,16 +39,25 @@ export class ProjectDetailsComponent {
     this._ActivatedRoute.paramMap.subscribe({
       next:(params)=>{
         let projectId = params.get('id')
-        this._SumouService.GetProjectById(projectId).subscribe({
-          next:(res)=>{
-            this.projectData = res.data
-            console.log(this.projectData);
-
-            if(!this.projectData.mainPicture){
-              this.projectData.mainPicture = this.projectData.projectDetails[0].picture
+        let type = params.get('type')
+        if(type == 'project'){
+          this._SumouService.GetProjectById(projectId).subscribe({
+            next:(res)=>{
+              this.projectData = res.data
+              if(!this.projectData.mainPicture){
+                this.projectData.mainPicture = this.projectData.projectDetails[0].picture
+              }
             }
-          }
-        })
+          })
+        } else if(type == 'model'){
+          this._SumouService.GetModelById(projectId).subscribe({
+            next:(res)=>{
+              this.projectData = res.data
+              console.log(this.projectData);
+            }
+          })
+        }
+
       }
     })
   }
